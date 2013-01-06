@@ -543,15 +543,22 @@ h2{
 		if(countryCode=="at") { return "Austria"; }
 		if(countryCode=="se") { return "Sweden"; }
 		if(countryCode=="sd") { return "Sudan"; }
+		return undefined;
 	}
 
 	function showInfo(countryCode){
 		var countryName = getCountryName(countryCode);
-		$('#countryNameBox').html(
-			'<b><img src="/img/miniflags/'+countryCode+'.png"> '+
-			'Buying Bitcoin in '+countryName+'</b>'
-		);
-		document.title = 'How to buy Bitcoin in '+countryName;
+		
+		if(countryName !== undefined){
+			$('#countryNameBox').html(
+				'<b><img src="/img/miniflags/'+countryCode+'.png"> '+
+				'Buying Bitcoin in '+countryName+'</b>'
+			);
+			document.title = 'How to buy Bitcoin in '+countryName;
+		}else{
+			$('#countryNameBox').html('');
+			document.title = 'How to Buy Bitcoin';			
+		}
 
 		//Hide old stuff
 		$('.serviceBox').hide();
