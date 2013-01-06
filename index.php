@@ -121,14 +121,8 @@ h2{
 
 		<div class="serviceBox bs ky kz pr ru tc ua us vg vi">
 			<img src="https://bitinstant.com/favicon.ico"> 
-			<a href="https://bitinstant.com/">BitInstant</a>
+			<a href="https://bitinstant.com/">BitInstant.com</a>
 			<p>Fast purchase of bitcoins through various methods including Moneygram, Dwolla, or a cash deposit at Walmart. Well known site.</p>
-		</div>
-
-		<div class="serviceBox be bg cz dk de ee ie el es fr it cy lv lt lu hu mt nl at pl pt ro si sk fi se uk">
-			<img src="/img/favicons/none.png"> 
-			<a href="https://therocktrading.com/">The Rock Trading</a>
-			<p>Trade e-currencies (such as Bitcoin and Lindens) from anywhere in Europe. (Supports SEPA bank transfers)</p>
 		</div>
 
 		<div class="serviceBox it">
@@ -137,58 +131,112 @@ h2{
 			<p>Acquista Bitcoin con Postepay! Il sistema più veloce, economico, sicuro e anonimo per acquistare Bitcoin con Euro in Italia. Tutto automatico.</p>
 		</div>
 
-		<div class="serviceBox es">
-			<img src="/img/favicons/none.png"> 
-			<a href="http://btctree.net">btctree.net</a>
-			<p>Spanish exchange.</p>
-		</div>
-
-		<div class="serviceBox uk us ru es de fr it cn th vn ms et hu pl fa ar">
-			<img src="https://www.okpay.com/favicon.ico"> 
-			<a href="https://www.okpay.com/en/company/news/bitcoin-okpay.html">OKPay</a>
-			<p>Large electronic currency trading and exchange site.</p>
-		</div> 
-
 		<div class="serviceBox uk">
 			<img src="https://blockchain.info/favicon.ico"> 
-			<a href="https://blockchain.info/wallet/deposit-bank-transfer">Bank transfer</a>
-			<p>Pay from any major UK bank account. Transfers bitcoin to your <a href="https://blockchain.info/">Blockchain.info</a> wallet in under 2 hours. Run by <a href="https://blockchain.info/">Blockchain.info</a>.</p>
+			<a href="https://blockchain.info/wallet/deposit-bank-transfer">Bank transfer (Blockchain.info)</a>
+			<p>Pay from any major UK bank account. Transfers bitcoin to your <a href="https://blockchain.info/">Blockchain.info</a> wallet in under 2 hours.</p>
 		</div>
 
 		<div class="serviceBox ar au at be ba bg ca cl hr cz dk ee fi fr de gr hk id ie il it lv lt lu mx nl nz no pl pt ro ru sk za es se ch tw tr ua uk us">
 			<img src="https://blockchain.info/favicon.ico"> 
-			<a href="https://blockchain.info/wallet/sms-phone-deposits">SMS Phone Deposits</a>
-			<p>Works with every mobile phone or landline. No registration required. No credit card required. Can only be used three times a month, but has no maximum purchase limit. Run by <a href="https://blockchain.info/">Blockchain.info</a>.</p>
+			<a href="https://blockchain.info/wallet/sms-phone-deposits">SMS Phone Deposits (Blockchain.info)</a>
+			<p>Works with every mobile phone or landline. No registration required. No credit card required. Can only be used three times a month, but has no maximum purchase limit.</p>
 		</div>
 
 		<div class="serviceBox uk">
 			<img src="https://blockchain.info/favicon.ico"> 
-			<a href="https://blockchain.info/wallet/deposit-pingit">Using the 'Barclays Pingit' iPhone App</a>
-			<p>Pay from any UK bank account. You can pay from a non-Barclays account, but transfer will be slower. Run by <a href="https://blockchain.info/">Blockchain.info</a>.</p>
+			<a href="https://blockchain.info/wallet/deposit-pingit">'Barclays Pingit' iPhone App (Blockchain.info)</a>
+			<p>Pay from any UK bank account. You can pay from a non-Barclays account, but transfer will be slower.</p>
 		</div>
 
 		<div class="serviceBox uk">
 			<img src="/img/favicons/none.png"> 
-			<a href="https://bitbargain.co.uk/">BitBargin</a>
+			<a href="https://bitbargain.co.uk/">BitBargain.co.uk</a>
 			<p>Pay from any major UK bank account. Pay with bank transfer or the Pingit app.</p>
-		</div>
-
-		<div class="serviceBox uk us ru nl fi pl cz it si">
-			<img src="/img/favicons/none.png"> 
-			<a href="https://www.bitstamp.net/">BitStamp</a>
-			<p>Buy and sell bitcoins with other users through an online marketplace.</p>
 		</div>
 
 		<div class="serviceBox us">
 			<img src="https://coinbase.com/favicon.ico"> 
-			<a href="https://coinbase.com/">Coinbase</a>
-			<p>A paypal-style Internet wallet. Connect a US bank account to buy bitcoins.</p>
+			<a href="https://coinbase.com/">Coinbase.com</a>
+			<p>A PayPal-style Internet wallet. Connect a US bank account to buy bitcoins.</p>
 		</div>
+
+		<div class="serviceBox cl us uk au ca fr de in it mx ph ru es at be dk ee fi gr ie lu nl nz no pl pt se ch">
+			<img src="http://portal.bitcoinschile.cl/wp-content/uploads/2012/10/favicon2.ico" /> 
+			<a href="http://portal.bitcoinschile.cl/">BitcoinsChile.cl</a>
+			<p>Buy bitcoins by bank transfer (Chile only), or by Western Digital or Moneygram (US, some of Europe, India, others.).</p>
+		</div>
+
+		<div class="serviceBox es">
+			<img src="http://www.bitcoin.com.es/images/favicon.png" width="16" /> 
+			<a href="http://www.bitcoin.com.es/">Bitcoin.com.es</a>
+			<p>Compra y vende Bitcoins con comodidad a traves de transferencia bancaria.</p>
+		</div>
+
+		<div class="serviceBox au">
+			<img src="https://www.spendbitcoins.com/media/css/images/favicon.ico"> 
+			<a href="https://www.spendbitcoins.com/">SpendBitcoins.com</a>
+			<p>Buy bitcoin in Australia by bank transfer.</p>
+		</div>
+
+		<div class="serviceBox au nz">
+			<img src="https://bitinnovate.com/favicon.ico" width="16"> 
+			<a href="https://bitinnovate.com/">BitInnovate.com</a>
+			<p>Buy bitcoin in New Zealand and Australia with a bank transfer.</p>
+		</div>
+		
+
+		<!-- Markets -->
+
+		<div class="serviceBox uk us ru es de fr it cn th vn ms et hu pl fa ar">
+			<img src="https://www.okpay.com/favicon.ico"> 
+			<a href="https://www.okpay.com/en/company/news/bitcoin-okpay.html">OKPay.com</a>
+			<p>Large electronic currency trading and exchange site.</p>
+		</div> 
+
+		<div class="serviceBox be bg cz dk de ee ie el es fr it cy lv lt lu hu mt nl at pl pt ro si sk fi se uk">
+			<img src="/img/favicons/none.png"> 
+			<a href="https://therocktrading.com/">TheRockTrading.com</a>
+			<p>Trade e-currencies (such as Bitcoin and Lindens) from anywhere in Europe. (Supports SEPA bank transfers)</p>
+		</div>
+
+		<div class="serviceBox uk us ru nl fi pl cz it si">
+			<img src="https://www.bitstamp.net/s/favicon.ico"> 
+			<a href="https://www.bitstamp.net/">BitStamp.net</a>
+			<p>Buy and sell bitcoins with other users through an online marketplace.</p>
+		</div>
+
+		<div class="serviceBox uk ru">
+			<img src="https://btc-e.com/favicon.ico"> 
+			<a href="https://btc-e.com/">BTC-e.com</a>
+			<p>Market for buying and selling bitcoin for the UK and Russia.</p>
+		</div>
+
+		<div class="serviceBox be bg cz dk de ee ie el es fr it cy lv lt lu hu mt nl at pl pt ro si sk fi se uk">
+			<img src="https://bitmarket.eu/favicon.ico" width="16"> 
+			<a href="https://bitmarket.eu/">BitMarket.eu</a>
+			<p>Market for buying and selling bitcoin. Accepts SEPA bank transfers from anywhere in Europe.</p>
+		</div>
+
+		<div class="serviceBox be bg cz dk de ee ie el es fr it cy lv lt lu hu mt nl at pl pt ro si sk fi se uk">
+			<img src="https://www.bitcoin.de/favicon.ico"> 
+			<a href="https://www.bitcoin.de/">Bitcoin.de</a>
+			<p>Market for buying and selling bitcoin. Accepts SEPA bank transfers from anywhere in Europe.</p>
+		</div>
+
+		<div class="serviceBox be bg cz dk de ee ie el es fr it cy lv lt lu hu mt nl at pl pt ro si sk fi se uk">
+			<img src="https://intersango.com/templates/clean/img/favicon.png"> 
+			<a href="https://intersango.com/">Intersango.com</a>
+			<p>Market for buying and selling bitcoin. Accepts SEPA bank transfers from anywhere in Europe.</p>
+		</div>
+
+
+		<!-- OTC -->
 
 		<div class="serviceBox af ax al dz as ad ao ai aq ag ar am aw au at az bs bh bd bb by be bz bj bm bt bo ba bw bv br io bn bg bf bi kh cm ca cv ky cf td cl cn cx cc co km cg cd ck cr ci hr cu cy cz dk dj dm do ec eg sv gq er ee et fk fo fj fi fr gf pf tf ga gm ge de gh gi gr gl gd gp gu gt gg gn gw gy ht hm va hn hk hu is in id ir iq ie im il it jm jp je jo kz ke ki kp kr kw kg la lv lb ls lr ly li lt lu mo mk mg mw my mv ml mt mh mq mr mu yt mx fm md mc mn me ms ma mz mm na nr np nl an nc nz ni ne ng nu nf mp no om pk pw ps pa pg py pe ph pn pl pt pr qa re ro ru rw sh kn lc pm vc ws sm st sa sn rs sc sl sg sk si sb so za gs es lk sd sr sj sz se ch sy tw tj tz th tl tg tk to tt tn tr tm tc tv ug ua ae uk us um uy uz vu ve vn vg vi wf eh ye zm zw">
 			<img src="/img/favicons/localbitcoins.png"> 
-			<a href="https://localbitcoins.com/">In-person trading</a>
-			<p>Find someone in your local area who trades bitcoins for cash, and arrange to meet them in person. Run by <a href="https://localbitcoins.com/">LocalBitcoins.com</a>.</p>
+			<a href="https://localbitcoins.com/">LocalBitcoins.com</a>
+			<p>In-person trading. Find someone in your local area who trades bitcoins for cash, and arrange to meet them in person. Run by <a href="https://localbitcoins.com/">LocalBitcoins.com</a>.</p>
 		</div>
 
 		<div class="serviceBox af ax al dz as ad ao ai aq ag ar am aw au at az bs bh bd bb by be bz bj bm bt bo ba bw bv br io bn bg bf bi kh cm ca cv ky cf td cl cn cx cc co km cg cd ck cr ci hr cu cy cz dk dj dm do ec eg sv gq er ee et fk fo fj fi fr gf pf tf ga gm ge de gh gi gr gl gd gp gu gt gg gn gw gy ht hm va hn hk hu is in id ir iq ie im il it jm jp je jo kz ke ki kp kr kw kg la lv lb ls lr ly li lt lu mo mk mg mw my mv ml mt mh mq mr mu yt mx fm md mc mn me ms ma mz mm na nr np nl an nc nz ni ne ng nu nf mp no om pk pw ps pa pg py pe ph pn pl pt pr qa re ro ru rw sh kn lc pm vc ws sm st sa sn rs sc sl sg sk si sb so za gs es lk sd sr sj sz se ch sy tw tj tz th tl tg tk to tt tn tr tm tc tv ug ua ae uk us um uy uz vu ve vn vg vi wf eh ye zm zw">
