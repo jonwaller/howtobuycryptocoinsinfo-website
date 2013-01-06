@@ -15,17 +15,27 @@ body{
 	font-family: sans-serif;
 }
 
-header{
+.leftheader{
+	float:left;
+}
+
+.rightheader{
+	float:right;
 	text-align: right;
 }
-header a{
+.rightheader a{
 	color:white;
 }
-header a:visited{
+.rightheader a:visited{
 	color:white;
 }
-header a:active{
+.rightheader a:active{
 	color:white;
+}
+
+.rightfooter{
+	float:right;
+	text-align: right;
 }
 
 h1{
@@ -82,7 +92,14 @@ h2{
 
 </head>
 <body>
-<header><a href="http://www.jonwaller.net/">Me</a> | <a href="mailto:info@howtobuybitcoins.info">Comments / Updates?</a></header>	
+<div class="addthis_toolbox addthis_default_style leftheader">
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	<a class="addthis_button_tweet"></a>
+</div>
+<div class="rightheader">
+	<a href="http://www.jonwaller.net/">Me</a> | <a href="mailto:info@howtobuybitcoins.info">Comments / Updates?</a>
+</div>	
+<br style="clear:both"/>
 
 <h1>How to Buy Bitcoins</h1>
 
@@ -258,6 +275,18 @@ h2{
 		</div>
 
 
+		<!-- AddThis Button BEGIN -->
+		<hr />
+		<div class="addthis_toolbox addthis_default_style" style="float:left">
+			<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+			<a class="addthis_button_tweet"></a>
+			<a class="addthis_button_google_plusone_share"></a>
+			<a class="addthis_button_email"></a>
+		</div>
+		<div class="rightfooter">
+			<a href="http://www.jonwaller.net/">Me</a> | <a href="mailto:info@howtobuybitcoins.info">Comments / Updates?</a>
+		</div>	
+		<!-- AddThis Button END -->
 
 	</div>
 
@@ -522,6 +551,7 @@ h2{
 			'<b><img src="/img/miniflags/'+countryCode+'.png"> '+
 			'Buying Bitcoin in '+countryName+'</b>'
 		);
+		document.title = 'How to buy Bitcoin in '+countryName;
 
 		//Hide old stuff
 		$('.serviceBox').hide();
@@ -584,6 +614,8 @@ h2{
 	});
 </script>
 
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+		
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
