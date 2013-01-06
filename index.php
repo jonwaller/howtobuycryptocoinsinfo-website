@@ -541,15 +541,33 @@ h2{
 		}
 	}
 
+	function goToCountryInHash(){
+		if(window.location.hash) {
+			//Puts hash in variable, and removes the # character
+			var countryCode = window.location.hash.substring(1); 
+			if (countryCode.length==2 && countryCode!=='xx'){
+				showInfo(countryCode);	
+			}
+		}
+	}
+
 	$(document).ready(function(){
 		
 		$('.infoBox').hide();
+		
+		//If there is a country hash
+		goToCountryInHash();
+
+		$(window).bind('hashchange', function() {
+			goToCountryInHash();
+		});
 
 		$(".flagButton").click(function(){ 
 			var flagIdClicked = $(this)[0].id;
 			var countryCode = flagIdClicked.replace('#','');
 			if (countryCode!=='xx'){
-				showInfo(countryCode);	
+				location.href='/#'+countryCode;
+				//showInfo(countryCode);	
 			}		 
 		});
 
@@ -557,7 +575,8 @@ h2{
 			$("select option:selected").each(function () {
 				var countryCodeFromDropdown=$(this).val();
 				if (countryCodeFromDropdown!=='xx'){
-					showInfo(countryCodeFromDropdown);	
+					location.href='/#'+countryCodeFromDropdown;
+					//showInfo(countryCodeFromDropdown);	
 				}
 			});
 		}).change();
