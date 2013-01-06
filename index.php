@@ -206,10 +206,10 @@ h2{
 
 		<!-- Affiliate-style -->		
 
-		<div class="serviceBox es">
+		<div class="serviceBox ar bo br cl co cr cu do ec es sv ht hn mx pa py pe pr uy">
 			<img src="/img/favicons/none.png" width="16"> 
 			<a href="http://www.btctree.net/">BTCTree.net</a>
-			<p>Affiliate marketing site, but you can fund your account and withdraw bitcoins without using the affiliate part of the site. Accepts Liberty Reserve, Pecunix, Ukash, Paysafecard and CashU.</p>
+			<p>Affiliate marketing site, but you can fund your account and withdraw bitcoins without using the affiliate part of the site. Accepts bank transfer, Liberty Reserve, Pecunix, Ukash, Paysafecard, Western Union, Moneygram, Neteller, and CashU.</p>
 		</div>
 
 
