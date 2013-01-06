@@ -3,6 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>How to Buy Bitcoins</title>
+	<meta name="description" content="Ways to buy Bitcoins in your country. Payments by bank transfer, PayPal and phone, as well as many other methods.">
 	<meta name="robots" content="index, follow" />
 	<link rel="shortcut icon" href="/favicon.png" />
 	<link rel="apple-touch-icon" href="/touchicon.png"/>
@@ -201,7 +202,16 @@ h2{
 			<a href="https://bitinnovate.com/">BitInnovate.com</a>
 			<p>Buy bitcoin in New Zealand and Australia with a bank transfer.</p>
 		</div>
-		
+
+
+		<!-- Affiliate-style -->		
+
+		<div class="serviceBox es">
+			<img src="/img/favicons/none.png" width="16"> 
+			<a href="http://www.btctree.net/">BTCTree.net</a>
+			<p>Affiliate marketing site, but you can fund your account and withdraw bitcoins without using the affiliate part of the site. Accepts Liberty Reserve, Pecunix, Ukash, Paysafecard and CashU.</p>
+		</div>
+
 
 		<!-- Markets -->
 
