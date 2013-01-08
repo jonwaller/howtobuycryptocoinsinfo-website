@@ -93,6 +93,44 @@ h2{
 
 </head>
 <body>
+<div id="fb-root"></div>
+<script>
+	window.fbAsyncInit = function() {
+		// init the FB JS SDK
+		FB.init({
+			appId      : '268112269983311', // App ID from the App Dashboard
+			channelUrl : '//<?=$_SERVER["SERVER_NAME"]?>/channel.html', // Channel File for x-domain communication
+			status     : true, // check the login status upon init?
+			cookie     : true, // set sessions cookies to allow your server to access the session?
+			xfbml      : true  // parse XFBML tags on this page?
+		});
+
+		fbApiInit = true; //init flag
+	};
+
+	// Load the SDK's source Asynchronously
+	// Note that the debug version is being actively developed and might 
+	// contain some type checks that are overly strict. 
+	// Please report such bugs using the bugs tool.
+	(function(d, debug){
+		var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+		if (d.getElementById(id)) {return;}
+		js = d.createElement('script'); js.id = id; js.async = true;
+		js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
+		ref.parentNode.insertBefore(js, ref);
+	}(document, /*debug*/ false));
+
+	function fbEnsureInit(callback) {
+		if(!window.fbApiInit) {
+			setTimeout(function() {fbEnsureInit(callback);}, 50);
+		} else {
+			if(callback) {
+				callback();
+			}
+		}
+	}
+</script>
+
 <div class="addthis_toolbox addthis_default_style leftheader">
 	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
 	<a class="addthis_button_tweet"></a>
@@ -286,6 +324,8 @@ h2{
 			<p>Over-the-counter exchange. Find a direct seller online to buy and sell bitcoin with.</p>
 		</div>
 
+		<hr />
+		<div id="facebookCommentsBox"></div>
 
 		<!-- AddThis Button BEGIN -->
 		<hr />
@@ -563,12 +603,25 @@ h2{
 	function showInfo(countryCode){
 		var countryName = getCountryName(countryCode);
 		
+		$('#facebookCommentsBox').html('');
 		if(countryName !== undefined){
 			$('#countryNameBox').html(
 				'<b><img src="/img/miniflags/'+countryCode+'.png"> '+
 				'Buying Bitcoin in '+countryName+'</b>'
 			);
 			document.title = 'How to buy Bitcoin in '+countryName;
+
+			fbEnsureInit(function() {
+				var commentsBoxContainer=document.getElementById('facebookCommentsBox');
+				while (commentsBoxContainer.hasChildNodes()) {
+    				commentsBoxContainer.removeChild(commentsBoxContainer.lastChild);
+				}
+				
+				var newCommentBoxHtml='<div class="fb-comments" data-href="http://<?=$_SERVER["SERVER_NAME"]?>/#'+countryCode+'" data-num-posts="20" data-width="500"></div>';;
+				commentsBoxContainer.innerHTML=newCommentBoxHtml; 
+				FB.XFBML.parse(commentsBoxContainer);
+			});
+
 		}else{
 			$('#countryNameBox').html('');
 			document.title = 'How to Buy Bitcoin';			
