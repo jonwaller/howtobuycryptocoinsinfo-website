@@ -7,6 +7,11 @@
 	<meta name="robots" content="index, follow" />
 	<link rel="shortcut icon" href="/favicon.png" />
 	<link rel="apple-touch-icon" href="/touchicon.png"/>
+	
+	<meta property="og:title" content="How to Buy Bitcoins" />
+	<meta property="og:description" content="Ways to buy Bitcoins in your country. Payments by bank transfer, PayPal and phone, as well as many other methods." />
+	<meta property="og:image" content="http://<?=$_SERVER["SERVER_NAME"]?>/logo256.png" />
+
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <style>
 body{
@@ -243,6 +248,8 @@ h2{
 			<p>Buy bitcoin in New Zealand and Australia with a bank transfer.</p>
 		</div>
 
+<?/*
+		Perhaps suspicious. Hiding for now.
 
 		<!-- Affiliate-style -->		
 
@@ -251,7 +258,7 @@ h2{
 			<a href="http://www.btctree.net/">BTCTree.net</a>
 			<p>Affiliate marketing site, but you can fund your account and withdraw bitcoins without using the affiliate part of the site. Accepts bank transfer, Liberty Reserve, Pecunix, Ukash, Paysafecard, Western Union, Moneygram, Neteller, and CashU.</p>
 		</div>
-
+*/?>
 
 		<!-- Markets -->
 
