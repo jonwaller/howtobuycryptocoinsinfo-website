@@ -141,7 +141,7 @@ h2{
 	<a class="addthis_button_tweet"></a>
 </div>
 <div class="rightheader">
-	<a href="//plus.google.com/112885603889814071692?prsrc=3" rel="publisher" style="text-decoration:none;">
+	<a href="https://plus.google.com/112885603889814071692/" rel="author" style="text-decoration:none;">
 		<img src="//ssl.gstatic.com/images/icons/gplus-16.png" alt="Google+" style="border:0;width:16px;height:16px;vertical-align: top;"/>
 	</a> <a href="http://www.jonwaller.net/">Me</a> | <a href="mailto:info@howtobuybitcoins.info">Comments / Updates?</a>
 </div>	
@@ -361,7 +361,7 @@ h2{
 			<a class="addthis_button_email"></a>
 		</div>
 		<div class="rightfooter">
-			<a href="//plus.google.com/112885603889814071692?prsrc=3" rel="publisher" style="text-decoration:none;">
+			<a href="https://plus.google.com/112885603889814071692/" rel="author" style="text-decoration:none;">
 				<img src="//ssl.gstatic.com/images/icons/gplus-16.png" alt="Google+" style="border:0;width:16px;height:16px;vertical-align: top;"/>
 			</a> <a href="http://www.jonwaller.net/">Me</a> | <a href="mailto:info@howtobuybitcoins.info">Comments / Updates?</a>
 		</div>	
