@@ -304,6 +304,18 @@ h2{
 			<p>Market for buying and selling bitcoin. Accepts SEPA bank transfers from anywhere in Europe.</p>
 		</div>
 
+		<div class="serviceBox br">
+			<img src="http://www.mercadobitcoin.com.br/static/ico/favicon.ico" width="16" /> 
+			<a href="http://www.MercadoBitcoin.com.br/">MercadoBitcoin.com.br</a>
+			<p>Buy and sell bitcoins in Brazil.</p>
+		</div>
+
+		<div class="serviceBox br">
+			<img src="http://bbbitcoins.com.br/imagem/cache/data/icon-20x20.png" width="16" /> 
+			<a href="http://bbbitcoins.com.br/">bbbitcoins.com.br</a>
+			<p>Buy and sell bitcoins in Brazil.</p>
+		</div>
+
 
 		<!-- OTC -->
 
