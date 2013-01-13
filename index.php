@@ -304,6 +304,12 @@ h2{
 			<p>Market for buying and selling bitcoin. Accepts SEPA bank transfers from anywhere in Europe.</p>
 		</div>
 
+		<div class="serviceBox il">
+			<img src="https://bitcoil.co.il/favicon.ico" width="16" /> 
+			<a href="https://bitcoil.co.il/">bitcoil.co.il</a>
+			<p>Here you can buy and sell bitcoins for Israeli New Shekels.</p>
+		</div>
+
 		<div class="serviceBox br">
 			<img src="http://www.mercadobitcoin.com.br/static/ico/favicon.ico" width="16" /> 
 			<a href="http://www.MercadoBitcoin.com.br/">MercadoBitcoin.com.br</a>
