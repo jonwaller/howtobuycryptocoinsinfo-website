@@ -229,10 +229,23 @@ h2{
 			<a href="http://portal.bitcoinschile.cl/">BitcoinsChile.cl</a>
 			<p>Buy bitcoins by bank transfer (Chile only), or by Western Digital or Moneygram (US, some of Europe, India, others.).</p>
 		</div>
-		<div class="serviceBox in">
-			<img src="http://www.bitcoin.com.es/images/favicon.png" width="16" /> 
-			<a href="http://rbitco.in/">rbitco.in</a>
-			<p>Real Bitcoin India</p>
+		<div class="serviceBox in us uk ca au">
+			<img src="https://rbitcoin/img/rBitCoin.png" width="16" /> 
+			<a href="https://rbitco.in/">rbitco.in</a>
+			<p>Real Bitcoin India:      
+			<ul>
+				<li>Gives away Bitcoins on activities within your account - registering, sign-in, referrals, messaging.</li>
+				<li>Gives away Bitcoins on activities within your referral's accounts - registering, sign-in, referrals, messaging.</li>
+				<li>Earn more by lending bitcoins to peers</li>
+				<li>Get a loan from peers for your urgent needs</li>
+				<li>Holds unique prize winning competitions for earning free Bitcoins from time to time.</li>
+				<li>Gives away Bitcoins for clicking and visiting sponsored sites.</li>
+				<li>Basically you can earn Bitcoin every hour in 8-10 hours of your work-time.</li>
+				<li>Promotes games, competition (based on your interests) to win free Bitcoins.</li>
+				<li>Gives away competitive interest rates on your Bitcoin deposits for you to earn free Bitcoins.</li>
+				<li>Gives away Bitcoins for free when you retweet or forward an old message to every new referral / member </li>
+			</ul>
+		</p>
 		</div>
 
 		<div class="serviceBox es">
