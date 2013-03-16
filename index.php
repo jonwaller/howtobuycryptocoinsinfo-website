@@ -151,10 +151,10 @@ h2{
 
 <div class="flagButtons">
 	<h2>I live in:</h2>
-	<?makeFlagButton('us','United States');?>
-	<?makeFlagButton('uk','United Kingdom');?>
-	<?makeFlagButton('jp','Japan / 日本');?>
-	<?makeOtherButton('Somewhere else');?>
+	<?php makeFlagButton('us','United States');?>
+	<?php makeFlagButton('uk','United Kingdom');?>
+	<?php makeFlagButton('jp','Japan / 日本');?>
+	<?php makeOtherButton('Somewhere else');?>
 	<br style="clear:both" />
 </div>
 
@@ -229,6 +229,24 @@ h2{
 			<a href="http://portal.bitcoinschile.cl/">BitcoinsChile.cl</a>
 			<p>Buy bitcoins by bank transfer (Chile only), or by Western Digital or Moneygram (US, some of Europe, India, others.).</p>
 		</div>
+		<div class="serviceBox in us uk ca au">
+			<img src="https://rbitcoin/img/rBitCoin.png" width="16" /> 
+			<a href="https://rbitco.in/">rbitco.in</a>
+			<p>Real Bitcoin India:      
+			<ul>
+				<li>Gives away Bitcoins on activities within your account - registering, sign-in, referrals, messaging.</li>
+				<li>Gives away Bitcoins on activities within your referral's accounts - registering, sign-in, referrals, messaging.</li>
+				<li>Earn more by lending bitcoins to peers</li>
+				<li>Get a loan from peers for your urgent needs</li>
+				<li>Holds unique prize winning competitions for earning free Bitcoins from time to time.</li>
+				<li>Gives away Bitcoins for clicking and visiting sponsored sites.</li>
+				<li>Basically you can earn Bitcoin every hour in 8-10 hours of your work-time.</li>
+				<li>Promotes games, competition (based on your interests) to win free Bitcoins.</li>
+				<li>Gives away competitive interest rates on your Bitcoin deposits for you to earn free Bitcoins.</li>
+				<li>Gives away Bitcoins for free when you retweet or forward an old message to every new referral / member </li>
+			</ul>
+		</p>
+		</div>
 
 		<div class="serviceBox es">
 			<img src="http://www.bitcoin.com.es/images/favicon.png" width="16" /> 
@@ -248,7 +266,7 @@ h2{
 			<p>Buy bitcoin in New Zealand and Australia with a bank transfer.</p>
 		</div>
 
-<?/*
+<?php /*
 		Perhaps suspicious. Hiding for now.
 
 		<!-- Affiliate-style -->		
@@ -626,6 +644,7 @@ h2{
 	}
 
 	function showInfo(countryCode){
+
 		var countryName = getCountryName(countryCode);
 		
 		$('#facebookCommentsBox').html('');
@@ -642,7 +661,7 @@ h2{
     				commentsBoxContainer.removeChild(commentsBoxContainer.lastChild);
 				}
 				
-				var newCommentBoxHtml='<div class="fb-comments" data-href="http://<?=$_SERVER["SERVER_NAME"]?>/#'+countryCode+'" data-num-posts="20" data-width="500"></div>';;
+				var newCommentBoxHtml='<div class="fb-comments" data-href="http://<?=$_SERVER["SERVER_NAME"]?>/'+countryCode+'.html" data-num-posts="20" data-width="500"></div>';;
 				commentsBoxContainer.innerHTML=newCommentBoxHtml; 
 				FB.XFBML.parse(commentsBoxContainer);
 			});
@@ -671,13 +690,15 @@ h2{
 	}
 
 	function goToCountryInHash(){
-		if(window.location.hash) {
+//		if(window.location.hash) {
 			//Puts hash in variable, and removes the # character
-			var countryCode = window.location.hash.substring(1); 
+			// var countryCode = window.location.hash.substring(1); 
+			var countryCode = '<?=$_REQUEST['country']?>';
+
 			if (countryCode.length==2 && countryCode!=='xx'){
 				showInfo(countryCode);	
 			}
-		}
+//		}
 	}
 
 	$(document).ready(function(){
@@ -695,7 +716,7 @@ h2{
 			var flagIdClicked = $(this)[0].id;
 			var countryCode = flagIdClicked.replace('#','');
 			if (countryCode!=='xx'){
-				location.href='/#'+countryCode;
+				location.href='/'+countryCode+".html";
 				//showInfo(countryCode);	
 			}		 
 		});
@@ -704,7 +725,7 @@ h2{
 			$("select option:selected").each(function () {
 				var countryCodeFromDropdown=$(this).val();
 				if (countryCodeFromDropdown!=='xx'){
-					location.href='/#'+countryCodeFromDropdown;
+					location.href='/'+countryCodeFromDropdown+".html";
 					//showInfo(countryCodeFromDropdown);	
 				}
 			});
@@ -732,7 +753,7 @@ h2{
 </body>
 </html>
 
-<?
+<?php
 function makeFlagButton($countryCode,$humanReadableName){
 	$flagImg = "<img src='/img/flags/$countryCode.png' alt='Flag for $humanReadableName' />";
 	echo "<div id='#$countryCode' class='flagButton'>".
