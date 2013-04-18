@@ -1,7 +1,6 @@
 var flagsBecameSmall=false;
 
   var getCountryName = {
-
      gw:"Guinea-Bissau",
      gu:"Guam",
      gt:"Guatemala",
@@ -284,7 +283,7 @@ var flagsBecameSmall=false;
     $('.infoBox').hide();
 
     //Show new stuff
-    $('.'+countryCode).show(); //But still hidden by infoBox
+    //$('.'+countryCode).show(); //But still hidden by infoBox
     if (flagsBecameSmall){
       $('.infoBox').show('fast');
     }else{
