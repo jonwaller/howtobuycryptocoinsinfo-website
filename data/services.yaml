@@ -1,15 +1,18 @@
 bitinstant-us:
   countries: [us]
+  icon: /img/favicons/none.png
   content:|
     <p><b>Note: If you're unsure, the author recommends <a href="https://bitinstant.com/">BitInstant</a> for purchases, and <a href="https://blockchain.info/">Blockchain.info</a> for storing your bitcoins.</b></p>
 
 mtgox-uk:
   countries: [uk]
+  icon: /img/favicons/none.png
   content:|
     <p><b>Note: If you're unsure, the author recommends <a href="https://mtgox.com/">Mt. Gox</a> for purchases.</b></p>
 
 mtgox-jp:
   countries: [jp]
+  icon: /img/favicons/none.png
   content:|
     <p><b>Note: If you're unsure, the author recommends <a href="https://mtgox.com/">Mt. Gox</a> for purchases.</b></p>
     <p><b>不安の場合:　購入のため、当サイトのお勧めは渋谷にある<a href="https://mtgox.com/">Mt. Gox</a>です。</b></p>

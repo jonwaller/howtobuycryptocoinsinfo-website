@@ -18,18 +18,21 @@
 	<script src="/js/jquery.masonry.js"></script>
 	<script type="text/javascript">
 
-var flagsBecameSmall=false;
+	var flagsBecameSmall=false;
 
   function showInfo(countryCode){
 
     var countryName = getCountryName[countryCode];
     
     $('#facebookCommentsBox').html('');
+ 
     if(countryName !== undefined){
+
       $('#countryNameBox').html(
         '<b><img src="/img/miniflags/'+countryCode+'.png"> '+
         'Buying Bitcoin in '+countryName+'</b>'
       );
+ 
       document.title = 'How to buy Bitcoin in '+countryName;
 
       fbEnsureInit(function() {
@@ -89,24 +92,24 @@ var flagsBecameSmall=false;
       goToCountryInHash();
     });
 
-    $(".flagButton").click(function(){ 
+/*    $(".flagButton").click(function(){ 
       var flagIdClicked = $(this)[0].id;
       var countryCode = flagIdClicked.replace('#','');
       if (countryCode!=='xx'){
         location.href='/'+countryCode+".html";
         //showInfo(countryCode);  
       }    
-    });
+    });*/
 
       $("#countryDropdown").change(function () {
-      $("select option:selected").each(function () {
-        var countryCodeFromDropdown=$(this).val();
-        if (countryCodeFromDropdown!=='xx'){
-          location.href='/'+countryCodeFromDropdown+".html";
+      	$("select option:selected").each(function () {
+        	var countryCodeFromDropdown=$(this).val();
+        	if (countryCodeFromDropdown!=='xx'){
+          	location.href='/'+countryCodeFromDropdown+".html";
           //showInfo(countryCodeFromDropdown);  
-        }
-      });
-    }).change();
+        	}
+      	});
+	    }).change();
 
   });
 
@@ -262,10 +265,10 @@ endif;
 <?php
 function makeFlagButton($countryCode,$humanReadableName){
 	$flagImg = "<img src='/img/flags/$countryCode.png' alt='Flag for $humanReadableName' />";
-	echo "<div id='#$countryCode' class='flagButton'>".
+	echo "<a href='/$countryCode.html'><div id='#$countryCode' class='flagButton'>".
 			"<p>$flagImg</p>".
 			"<p>$humanReadableName</p>".
-		"</div>\n";
+		"</div></a>\n";
 }
 
 function makeOtherButton($humanReadableName){

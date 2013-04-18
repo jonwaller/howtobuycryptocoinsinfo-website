@@ -5,6 +5,11 @@ body{
   font-family: sans-serif;
 }
 
+a {
+  color: #336699;
+  text-decoration: none;
+}
+
 .leftheader{
   float:left;
 }
@@ -13,12 +18,15 @@ body{
   float:right;
   text-align: right;
 }
+
 .rightheader a{
   color:white;
 }
+
 .rightheader a:visited{
   color:white;
 }
+
 .rightheader a:active{
   color:white;
 }
@@ -45,7 +53,9 @@ h2{
   display:inline-block;
   width:200px;
   text-align: center;
+  color: white;
 }
+
 .flagButton:hover {
   color:black;
   background-color:rgba(255,255,255,0.8);
