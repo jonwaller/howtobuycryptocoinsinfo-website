@@ -207,8 +207,6 @@ $countrynames = Spyc::YAMLLoad("data/countries.yaml");
   endforeach;
 
 ?>
-  <div id="other_country_dropdown">
-  <a href="#" id="showother">Somewhere else</a>
   <div id="other">
     <ul>
 <?php foreach($countrynames as $code=>$name): 
@@ -217,7 +215,6 @@ $countrynames = Spyc::YAMLLoad("data/countries.yaml");
 <?        endif;
       endforeach; ?>
     </ul>
-  </div>
   </div>
  <div id='#xx' class='flagButton' style='width:300px'>
     <p>
