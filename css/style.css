@@ -5,6 +5,11 @@ body{
   font-family: sans-serif;
 }
 
+
+#other{
+  display: none;
+}
+
 a {
   color: #336699;
   text-decoration: none;
