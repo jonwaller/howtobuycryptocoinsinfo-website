@@ -1,0 +1,79 @@
+body{
+  background: black url('/img/bg/main.jpg') no-repeat;
+  background-size: 100%;
+  color:white;
+  font-family: sans-serif;
+}
+
+.leftheader{
+  float:left;
+}
+
+.rightheader{
+  float:right;
+  text-align: right;
+}
+.rightheader a{
+  color:white;
+}
+.rightheader a:visited{
+  color:white;
+}
+.rightheader a:active{
+  color:white;
+}
+
+.rightfooter{
+  float:right;
+  text-align: right;
+}
+
+h1{
+  text-align: center;
+  padding:1em;
+}
+h2{
+  text-align: center;
+  padding:1em;
+}
+
+.flagButtons{
+  display:block;
+  text-align: center;
+}
+.flagButton {
+  display:inline-block;
+  width:200px;
+  text-align: center;
+}
+.flagButton:hover {
+  color:black;
+  background-color:rgba(255,255,255,0.8);
+  border-radius:10px;
+}
+.flagButton img{
+  width:128px;
+  height:128px;
+}
+
+.infoBoxes{
+  display:block;
+  text-align: center;
+  padding:1em;
+}
+.infoBox{
+  width:80%;
+  display:inline-block;
+  text-align: left;
+  color:black;
+  background-color:rgba(255,255,255,0.8);
+  border-radius:10px;
+  padding:10px;
+}
+
+#countryNameBox{
+  padding:5px 0 10px 0;
+}
+.serviceBox{
+  padding:5px 0 5px 0;
+}
