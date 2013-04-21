@@ -6,281 +6,85 @@ require_once("lib/spyc.php");
 <?='<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">'?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>How to Buy Bitcoins</title>
-	<meta name="description" content="Ways to buy Bitcoins in your country. Payments by bank transfer, PayPal and phone, as well as many other methods.">
-	<meta name="robots" content="index, follow" />
-	<link rel="shortcut icon" href="/favicon.png" />
-	<link rel="apple-touch-icon" href="/touchicon.png"/>
-	<link rel="stylesheet" href="/css/style.css"/>
-	
-	<meta property="og:title" content="How to Buy Bitcoins" />
-	<meta property="og:description" content="Ways to buy Bitcoins in your country. Payments by bank transfer, PayPal and phone, as well as many other methods." />
-	<meta property="og:image" content="http://<?=$_SERVER["SERVER_NAME"]?>/logo256.png" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>How to Buy Bitcoins</title>
+  <meta name="description" content="Ways to buy Bitcoins in your country. Payments by bank transfer, PayPal and phone, as well as many other methods.">
+  <meta name="robots" content="index, follow" />
+  <link rel="shortcut icon" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/touchicon.png"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  
+  <meta property="og:title" content="How to Buy Bitcoins" />
+  <meta property="og:description" content="Ways to buy Bitcoins in your country. Payments by bank transfer, PayPal and phone, as well as many other methods." />
+  <meta property="og:image" content="http://<?=$_SERVER["SERVER_NAME"]?>/logo256.png" />
+  <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:700' rel='stylesheet' type='text/css'>
 
-	<script src="/js/jquery-1.9.min.js"></script>
+  <script src="/js/jquery-1.9.min.js"></script>
   <script src="/js/jquery.migrate.js"></script>
-	<script src="/js/wherebuybitcoins.js"></script>
-	<script src="/js/jquery.masonry.js"></script>
-	<script type="text/javascript">
-
-	var flagsBecameSmall=false;
-
-  function showInfo(countryCode){
-
-    var countryName = getCountryName[countryCode];
-    
-    $('#facebookCommentsBox').html('');
- 
-    if(countryName !== undefined){
-
-      $('#countryNameBox').html(
-        '<b><img src="/img/miniflags/'+countryCode+'.png"> '+
-        'Buying Bitcoin in '+countryName+'</b>'
-      );
- 
-      document.title = 'How to buy Bitcoin in '+countryName;
-
-      fbEnsureInit(function() {
-        var commentsBoxContainer=document.getElementById('facebookCommentsBox');
-        while (commentsBoxContainer.hasChildNodes()) {
-            commentsBoxContainer.removeChild(commentsBoxContainer.lastChild);
-        }
-        
-        var newCommentBoxHtml='<div class="fb-comments" data-href="http://<?=$_SERVER["SERVER_NAME"]?>/'+countryCode+'.html" data-num-posts="20" data-width="500"></div>';;
-        commentsBoxContainer.innerHTML=newCommentBoxHtml; 
-        FB.XFBML.parse(commentsBoxContainer);
-      });
-
-    }else{
-      $('#countryNameBox').html('');
-      document.title = 'How to Buy Bitcoin';      
-    }
-
-    //Hide old stuff
-    //$('.serviceBox').hide();
-    $('.infoBox').hide();
-
-    //Show new stuff
-    //$('.'+countryCode).show(); //But still hidden by infoBox
-    if (flagsBecameSmall){
-      $('.infoBox').show('fast');
-    }else{
-      $('h1').slideUp('slow');
-      $('.flagButtons h2').slideUp('slow');
-      $('.flagButton img').animate({width:'50px',height:'50px'},'slow',function(){
-        $('.infoBox').show('fast');
-        flagsBecameSmall=true;
-      });
-    }
-  }
-
-  function goToCountry(code){
-      //Puts hash in variable, and removes the # character
-      var countryCode = code; 
-      if (countryCode.length==2 && countryCode!=='xx'){
-        showInfo(countryCode);  
-      }
-  }
-
-  $(document).ready(function(){
-    $('.infoBox').hide();
-    $("a.flagButton").each(function(){
-      var code = $(this).attr("rel");
-      $(this).attr("href","/#"+code);
-    });
-    $(window).bind('hashchange', function() {
-      console.log("hash!");
-      if(window.location.hash){
-        var countrycode = window.location.hash.substring(1)
-        $.get("/api.php?country="+countrycode);
-      }
-    });
-    $("#countryDropdown").change(function () {
-      $("select option:selected").each(function () {
-        var countryCodeFromDropdown=$(this).val();
-        if (countryCodeFromDropdown!=='xx'){
-//          location.href='/'+countryCodeFromDropdown+".html";
-          goToCountry($(this).val());
-        //showInfo(countryCodeFromDropdown);  
-        }
-      });
-    }).change();
-  });
-
-	</script>
+  <script src="/js/jquery.placeholder.js"></script>
+  <script src="/js/jquery.autocomplete.min.js"></script>
+  <script src="/js/jquery.masonry.js"></script>
+  <script src="/js/wherebuybitcoins.js"></script>
 
 </head>
 <body>
-<div id="fb-root"></div>
+  <div id="titlearea">
+    <a href="/jp.html" class="flagicon" id="flag_jp"><img src="img/flags/jp.png" width="48" height="48"><br>Japan</a>
+    <a href="/us.html" class="flagicon" id="flag_us"><img src="img/flags/us.png" width="48" height="48"><br>USA</a>
+    <a href="/uk.html" class="flagicon" id="flag_uk"><img src="img/flags/uk.png" width="48" height="48"><br>UK</a>
 
-<?php
-// Load the service "database":
-$data = Spyc::YAMLLoad("data/services.yaml");
+  </div>
 
+    <div id="infoarea">
+      <div id="results">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+    </div>
 
-?>
-<script>
-	window.fbAsyncInit = function() {
-		// init the FB JS SDK
-		FB.init({
-			appId      : '268112269983311', // App ID from the App Dashboard
-			channelUrl : '//<?=$_SERVER["SERVER_NAME"]?>/channel.html', // Channel File for x-domain communication
-			status     : true, // check the login status upon init?
-			cookie     : true, // set sessions cookies to allow your server to access the session?
-			xfbml      : true  // parse XFBML tags on this page?
-		});
+    <div id="title">
+      <img src="img/How_to_buy.png" alt="How to buy"><br>
+      <img src="img/bitcoin.png" alt="bitcoins"><br>
+      <input type="text" id="searchbox" name="country" placeholder="Enter country name">
+    </div>
 
-		fbApiInit = true; //init flag
-	};
+  <script>
 
-	// Load the SDK's source Asynchronously
-	// Note that the debug version is being actively developed and might 
-	// contain some type checks that are overly strict. 
-	// Please report such bugs using the bugs tool.
-	(function(d, debug){
-		var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-		if (d.getElementById(id)) {return;}
-		js = d.createElement('script'); js.id = id; js.async = true;
-		js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
-		ref.parentNode.insertBefore(js, ref);
-	}(document, /*debug*/ false));
-
-	function fbEnsureInit(callback) {
-		if(!window.fbApiInit) {
-			setTimeout(function() {fbEnsureInit(callback);}, 50);
-		} else {
-			if(callback) {
-				callback();
-			}
-		}
-	}
-</script>
-
-<div class="addthis_toolbox addthis_default_style leftheader">
-	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-	<a class="addthis_button_tweet"></a>
-</div>
-<div class="rightheader">
-	<a href="https://plus.google.com/112885603889814071692/" rel="author" style="text-decoration:none;">
-		<img src="//ssl.gstatic.com/images/icons/gplus-16.png" alt="Google+" style="border:0;width:16px;height:16px;vertical-align: top;"/>
-	</a> <a href="http://www.jonwaller.net/">Me</a> | <a href="mailto:info@howtobuybitcoins.info">Comments / Updates?</a>
-</div>	
-<br style="clear:both"/>
-
-<h1>How to Buy Bitcoins</h1>
-
-<div class="flagButtons">
-	<h2>I live in:</h2>
-
-<?php
-
-/* Generate the buttons using the countries.yml file,
-  $promoted holds country codes of buttons that should show up first.
-*/ 
-
-$promoted = array("us", "uk", "jp");
-$countrynames = Spyc::YAMLLoad("data/countries.yaml"); 
-
-  function makeFlagButton($countryCode,$humanReadableName){
-    $flagImg = "<img src='/img/flags/$countryCode.png' alt='Flag for $humanReadableName' />";
-    echo "<a class='flagButton' href='/$countryCode.html' rel='$countryCode'>".
-      "<p>$flagImg</p>".
-      "<p>$humanReadableName</p>".
-      "</a>\n";
+  function loadCountry(code){
+    $.get("/api.php?country="+code,function(data){
+      $("body").addClass("country");
+      $("#results").html(data);
+      $("#results").masonry({itemSelector:".serviceBox"})
+    })    
   }
 
-  foreach($promoted as $code):
-    makeFlagButton($code,$countrynames[$code]);
-  endforeach;
+  $(document).ready(function(){
+    var countries = [];
+    for(var code in getCountryName){
+      var name = getCountryName[code];
+      countries.push({value:name, data:code});
+    }
 
-?>
-  <div id="other">
-    <ul>
-<?php foreach($countrynames as $code=>$name): 
-        if( ! in_array($code, $promoted) ): ?>
-        <li><a href="/<?= $code ?>.html"><?= $name ?></a></li>
-<?        endif;
-      endforeach; ?>
-    </ul>
-  </div>
- <div id='#xx' class='flagButton' style='width:300px'>
-    <p>
-      <select id='countryDropdown'>
-        <option value='xx'>[Choose a country]</option>
-<?php foreach($countrynames as $code=>$name): 
-        if( ! in_array($code, $promoted) ): ?>        
-        <option value='<?= $code; ?>'><?= $name; ?></option>
-<?php   endif;
-      endforeach; ?>
-      </select>
-    </p>
-    <p>Somewhere else</p>
-  </div>
-  <br style="clear:both" />
+    $('#searchbox').autocomplete({
+      lookup: countries,
+      onSelect: function (suggestion) {
+        loadCountry(suggestion.data);
+        window.location = "/#"+suggestion.data+".html"
+      }
+    });
 
-</div>
-
-<div class="infoBoxes">
-
-	<div class="infoBox">
-		<h2 id="countryNameBox"></h2>
-
-<?php 
-  require_once("lib/spyc.php");
-  require_once("lib/howtobuy.php");
-
-  $data = get_service_data("data/services.yaml");
-
-  $currentcountry = $_REQUEST['country'];
-  if($currentcountry):
-    generate_country_boxes($data, $currentcountry);
-  endif; 
-?>
-
-
-	<hr />
-		<div id="facebookCommentsBox"></div>
-
-		<!-- AddThis Button BEGIN -->
-		<hr />
-		<div class="addthis_toolbox addthis_default_style" style="float:left">
-			<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-			<a class="addthis_button_tweet"></a>
-			<a class="addthis_button_google_plusone_share"></a>
-			<a class="addthis_button_email"></a>
-		</div>
-		<div class="rightfooter">
-			<a href="https://plus.google.com/112885603889814071692/" rel="author" style="text-decoration:none;">
-				<img src="//ssl.gstatic.com/images/icons/gplus-16.png" alt="Google+" style="border:0;width:16px;height:16px;vertical-align: top;"/>
-			</a> <a href="http://www.jonwaller.net/">Me</a> | <a href="mailto:info@howtobuybitcoins.info">Comments / Updates?</a>
-		</div>	
-		<!-- AddThis Button END -->
-
-	</div>
-
-</div>
-
-
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
-		
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-4294505-15']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
+    $(window).bind('hashchange', function() {
+      if(window.location.hash){
+        $("body").addClass("country");
+      }else{
+        $("body").removeClass("country");
+      }
+    });
+  })
+  </script>
 </body>
 </html>
-
-<?php
-
-?>

@@ -1,94 +1,126 @@
 body{
-  background: black url('/img/bg/main.jpg') no-repeat;
-  background-size: 100%;
-  color:white;
-  font-family: sans-serif;
+  background: #485566;/* url('/img/world.png') top center repeat-x;*/
+  color: #666;
+  font-family: 'Merriweather Sans', Helvetica, Verdana, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-
-#other{
-  display: none;
+#titlearea{
+  width: 1024px;
+  background: url('/img/world.png') top center repeat-x;
+  margin: 0 auto;
+  color: white;
+  position: relative;
+  min-height: 600px;
+  -webkit-transform: top;
 }
 
-a {
-  color: #336699;
+a{
+  text-decoration: none;
+  color: #485566;
+}
+
+#titlearea a{
+  color: white;
   text-decoration: none;
 }
 
-.leftheader{
-  float:left;
-}
-
-.rightheader{
-  float:right;
-  text-align: right;
-}
-
-.rightheader a{
-  color:white;
-}
-
-.rightheader a:visited{
-  color:white;
-}
-
-.rightheader a:active{
-  color:white;
-}
-
-.rightfooter{
-  float:right;
-  text-align: right;
-}
-
-h1{
+.autocomplete-suggestions{
   text-align: center;
-  padding:1em;
-}
-h2{
-  text-align: center;
-  padding:1em;
+  padding: 2px;
+  color: #ccc;
+  background-color: #485566;
+  /*text-transform: uppercase;*/
 }
 
-.flagButtons{
-  display:block;
-  text-align: center;
-}
-.flagButton {
-  display:inline-block;
-  width:200px;
-  text-align: center;
+.autocomplete-suggestions strong{
   color: white;
 }
 
-.flagButton:hover {
-  color:black;
-  background-color:rgba(255,255,255,0.8);
-  border-radius:10px;
-}
-.flagButton img{
-  width:128px;
-  height:128px;
-}
-
-.infoBoxes{
-  display:block;
+#title{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding-top: 250px;
+  margin: 0 auto;
   text-align: center;
-  padding:1em;
-}
-.infoBox{
-  width:80%;
-  display:inline-block;
-  text-align: left;
-  color:black;
-  background-color:rgba(255,255,255,0.8);
-  border-radius:10px;
-  padding:10px;
+  -webkit-transform: top 2s;
 }
 
-#countryNameBox{
-  padding:5px 0 10px 0;
+#searchbox{
+  width: 350px;
+  margin: 15px;
+  border: 1px solid silver;
+  line-height: 25px;
+  font-size: 18px;
+  padding: 1px 10px;
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid #999;
+  border-radius: 6px;
+  color: #485566;
+  font-family: 'Merriweather Sans', Helvetica, Verdana, Arial, sans-serif;
 }
+
+.flagicon{
+  position: absolute;
+  text-align: center;
+}
+
+#flag_jp{
+  top: 200px;
+  left: 920px;
+}
+
+#flag_us{
+  top: 200px;
+  left: 220px;
+}
+
+#flag_uk{
+  top: 120px;
+  left: 500px;
+}
+
+#infoarea{
+  display: none;
+  background-color: #eee;
+  border: 2px solid white;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  padding-top: 20px;
+  min-height: 300px;
+  -webkit-transform: top;
+}
+
+#results{
+  width: 1024px;
+  margin: 0 auto;
+}
+
 .serviceBox{
-  padding:5px 0 5px 0;
+  width: 290px;
+  margin: 0 0px 20px 20px;
+  float: left;
+  background-color: white;
+  border: 2px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
 }
+
+.country #titlearea{
+  position: relative;
+  top: -100px;
+}
+
+.country #title{
+  padding-top:100px;
+}
+
+.country #infoarea{
+  display: block;
+  top: 250px;
+}
+
