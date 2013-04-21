@@ -1,3 +1,8 @@
+<?php
+
+require_once("lib/spyc.php");
+
+?>
 <?='<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">'?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -13,7 +18,8 @@
 	<meta property="og:description" content="Ways to buy Bitcoins in your country. Payments by bank transfer, PayPal and phone, as well as many other methods." />
 	<meta property="og:image" content="http://<?=$_SERVER["SERVER_NAME"]?>/logo256.png" />
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="/js/jquery-1.9.min.js"></script>
+  <script src="/js/jquery.migrate.js"></script>
 	<script src="/js/wherebuybitcoins.js"></script>
 	<script src="/js/jquery.masonry.js"></script>
 	<script type="text/javascript">
@@ -69,50 +75,37 @@
     }
   }
 
-  function goToCountryInHash(){
-//    if(window.location.hash) {
+  function goToCountry(code){
       //Puts hash in variable, and removes the # character
-      // var countryCode = window.location.hash.substring(1); 
-      var countryCode = '<?=$_REQUEST['country']?>';
-
+      var countryCode = code; 
       if (countryCode.length==2 && countryCode!=='xx'){
         showInfo(countryCode);  
       }
-//    }
   }
 
   $(document).ready(function(){
-    
     $('.infoBox').hide();
-    $('body').click(function(){
-      $('#other').hide();
-    })
-    //If there is a country hash
-    goToCountryInHash();
-
-    $(window).bind('hashchange', function() {
-      goToCountryInHash();
+    $("a.flagButton").each(function(){
+      var code = $(this).attr("rel");
+      $(this).attr("href","/#"+code);
     });
-
-/*    $(".flagButton").click(function(){ 
-      var flagIdClicked = $(this)[0].id;
-      var countryCode = flagIdClicked.replace('#','');
-      if (countryCode!=='xx'){
-        location.href='/'+countryCode+".html";
-        //showInfo(countryCode);  
-      }    
-    });*/
-
-      $("#countryDropdown").change(function () {
-      	$("select option:selected").each(function () {
-        	var countryCodeFromDropdown=$(this).val();
-        	if (countryCodeFromDropdown!=='xx'){
-          	location.href='/'+countryCodeFromDropdown+".html";
-          //showInfo(countryCodeFromDropdown);  
-        	}
-      	});
-	    }).change();
-
+    $(window).bind('hashchange', function() {
+      console.log("hash!");
+      if(window.location.hash){
+        var countrycode = window.location.hash.substring(1)
+        $.get("/api.php?country="+countrycode);
+      }
+    });
+    $("#countryDropdown").change(function () {
+      $("select option:selected").each(function () {
+        var countryCodeFromDropdown=$(this).val();
+        if (countryCodeFromDropdown!=='xx'){
+//          location.href='/'+countryCodeFromDropdown+".html";
+          goToCountry($(this).val());
+        //showInfo(countryCodeFromDropdown);  
+        }
+      });
+    }).change();
   });
 
 	</script>
@@ -123,7 +116,6 @@
 
 <?php
 // Load the service "database":
-require_once("lib/spyc.php");
 $data = Spyc::YAMLLoad("data/services.yaml");
 
 
@@ -190,16 +182,12 @@ $data = Spyc::YAMLLoad("data/services.yaml");
 $promoted = array("us", "uk", "jp");
 $countrynames = Spyc::YAMLLoad("data/countries.yaml"); 
 
-  function makeFlagButton($countryCode,$humanReadableName, $small=false){
-    if($small):
-      $flagImg = "<img src='/img/miniflags/$countryCode.png' alt='Flag for $humanReadableName' />";
-    else:
-      $flagImg = "<img src='/img/flags/$countryCode.png' alt='Flag for $humanReadableName' />";
-    endif;
-    echo "<a href='/$countryCode.html'><div id='#$countryCode' class='flagButton'>".
+  function makeFlagButton($countryCode,$humanReadableName){
+    $flagImg = "<img src='/img/flags/$countryCode.png' alt='Flag for $humanReadableName' />";
+    echo "<a class='flagButton' href='/$countryCode.html' rel='$countryCode'>".
       "<p>$flagImg</p>".
       "<p>$humanReadableName</p>".
-      "</div></a>\n";
+      "</a>\n";
   }
 
   foreach($promoted as $code):
@@ -239,30 +227,15 @@ $countrynames = Spyc::YAMLLoad("data/countries.yaml");
 		<h2 id="countryNameBox"></h2>
 
 <?php 
+  require_once("lib/spyc.php");
+  require_once("lib/howtobuy.php");
 
-$currentcountry = $_REQUEST['country'];
-if($currentcountry):
-	foreach($data as $service):
-		if(! $service["hidden"] ):
-			if( in_array($currentcountry, $service["countries"]) ):
-		?>
-			<div class="serviceBox <?php 
-				foreach($service["countries"] as $country):
-					echo $country." ";
-				endforeach;
-			?>">
-				<a href="<?= $service["url"] ?>" target="_blank">
-					<img width="16" height="16" src="<?= $service["icon"] ?>"> <?= $service["label"] ?>
-				</a>
-				<?= $service["content"] ?>
-			</div>
-	<?php
-			endif;
-		endif;
-	endforeach;
+  $data = get_service_data("data/services.yaml");
 
-
-endif; 
+  $currentcountry = $_REQUEST['country'];
+  if($currentcountry):
+    generate_country_boxes($data, $currentcountry);
+  endif; 
 ?>
 
 

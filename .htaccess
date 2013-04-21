@@ -1,7 +1,4 @@
 <IfModule mod_rewrite.c>
-    RewriteEngine on
-	
-    
-    RewriteRule    (.*).html /?country=$1 [QSA,L]
-
+  RewriteEngine on  
+  RewriteRule    (.*).html /?country=$1 [QSA,L]
 </IfModule>
