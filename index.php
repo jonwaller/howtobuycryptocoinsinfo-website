@@ -97,13 +97,17 @@ endif;
   <script>
 
   function loadCountry(code){
-    $.get("/api.php?country="+code,function(data){
-      $("body").addClass("country");
-      $("#results").html(data).masonry( 'destroy' );
-      $("#results").masonry({itemSelector:".serviceBox"});
-      $("#searchbox").val(getCountryName[code]);
-      $("#searchbox").css({"background-image": "url(/img/miniflags/"+code+".png)"});
-    })    
+    $("#searchbox").val(getCountryName[code]);
+    $("#searchbox").css({"background-image": "url(/img/miniflags/"+code+".png)"});
+    $(".serviceBox").fadeOut(function(){
+      $.get("/api.php?country="+code,function(data){
+        $("body").addClass("country");
+        $("#results").html(data).masonry( 'destroy' );
+        $("#results").masonry({itemSelector:".serviceBox"});
+        $("#results .serviceBox").hide();
+        $("#results .serviceBox").fadeIn("slow");
+      });
+    })
   }
 
     function checkhash() {
