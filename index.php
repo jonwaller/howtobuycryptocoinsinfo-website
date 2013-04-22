@@ -1,6 +1,9 @@
 <?php
 
 require_once("lib/spyc.php");
+require_once("lib/howtobuy.php");
+
+$currentcountry = $_REQUEST['country'];f
 
 ?>
 <?='<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">'?>
@@ -27,7 +30,11 @@ require_once("lib/spyc.php");
   <script src="/js/wherebuybitcoins.js"></script>
 
 </head>
-<body>
+<body <?php 
+  if($currentcountry):
+    echo "class='country'";
+  endif;
+?>>
   <div id="titlearea">
     <a href="/jp.html" class="flagicon" id="flag_jp"><img src="img/flags/jp.png" width="48" height="48"><br>Japan</a>
     <a href="/us.html" class="flagicon" id="flag_us"><img src="img/flags/us.png" width="48" height="48"><br>USA</a>
@@ -37,12 +44,12 @@ require_once("lib/spyc.php");
 
     <div id="infoarea">
       <div id="results">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <?php
+if(currentcountry):
+  $data = get_service_data("data/services.yaml");
+  generate_country_boxes($data, $currentcountry);
+endif;
+        ?>
       </div>
     </div>
 
@@ -57,13 +64,15 @@ require_once("lib/spyc.php");
   function loadCountry(code){
     $.get("/api.php?country="+code,function(data){
       $("body").addClass("country");
-      $("#results").html(data);
+      $("#results").html(data).masonry( 'destroy' )
       $("#results").masonry({itemSelector:".serviceBox"})
     })    
   }
 
   $(document).ready(function(){
     var countries = [];
+    $("#results").masonry({itemSelector:".serviceBox"})
+
     for(var code in getCountryName){
       var name = getCountryName[code];
       countries.push({value:name, data:code});
@@ -72,8 +81,8 @@ require_once("lib/spyc.php");
     $('#searchbox').autocomplete({
       lookup: countries,
       onSelect: function (suggestion) {
-        loadCountry(suggestion.data);
-        window.location = "/#"+suggestion.data+".html"
+        //loadCountry(suggestion.data);
+        window.location = "/"+suggestion.data+".html"
       }
     });
 

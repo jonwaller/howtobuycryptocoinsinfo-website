@@ -6,10 +6,14 @@ function generate_box($service){ ?>
       echo $country." ";
     endforeach;
   ?>">
-    <a href="<?= $service["url"] ?>" target="_blank">
-      <img width="16" height="16" src="<?= $service["icon"] ?>"> <?= $service["label"] ?>
-    </a>
-    <?= $service["content"] ?>
+      <a href="<?= $service["url"] ?>" target="_blank">
+    <h3 class="box-title">
+        <img width="16" height="16" src="<?= $service["icon"] ?>"> <?= $service["label"] ?>
+    </h3>
+      </a>
+    <div class="box-content">
+      <?= $service["content"] ?>
+    </div>
   </div>
   <?php
 }

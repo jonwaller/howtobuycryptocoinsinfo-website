@@ -29,21 +29,21 @@ a{
 .autocomplete-suggestions{
   text-align: center;
   padding: 2px;
-  color: #ccc;
-  background-color: #485566;
+  color: #444;
+  background-color: #eee;
   /*text-transform: uppercase;*/
 }
 
 .autocomplete-suggestions strong{
-  color: white;
+  color: black;
 }
 
 #title{
   position: absolute;
-  top: 0;
-  width: 100%;
-  padding-top: 250px;
-  margin: 0 auto;
+  top: 250px;
+  width: 460px;
+  left: 50%;
+  margin-left: -230px;
   text-align: center;
   -webkit-transform: top 2s;
 }
@@ -51,7 +51,7 @@ a{
 #searchbox{
   width: 350px;
   margin: 15px;
-  border: 1px solid silver;
+  border: 1px solid #ddd;
   line-height: 25px;
   font-size: 18px;
   padding: 1px 10px;
@@ -101,13 +101,32 @@ a{
 }
 
 .serviceBox{
-  width: 290px;
-  margin: 0 0px 20px 20px;
+  display: inline-block;
   float: left;
+  width: 290px;
+  margin: 10px 0px 30px 20px;
   background-color: white;
   border: 2px solid #ddd;
-  padding: 10px;
+  padding: 5px;
   border-radius: 4px;
+}
+
+.serviceBox a h3{
+  color: white;
+  background-color:  #485566;
+  margin: 0;
+  margin-left: 22px;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.serviceBox a img{
+  margin-left: -23px;
+}
+
+.serviceBox .box-content{
+  margin-left: 22px;
+  margin-right: 10px;
 }
 
 .country #titlearea{
@@ -116,7 +135,7 @@ a{
 }
 
 .country #title{
-  padding-top:100px;
+  top:100px;
 }
 
 .country #infoarea{
