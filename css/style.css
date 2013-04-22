@@ -70,6 +70,14 @@ a{
   /*text-transform: uppercase;*/
 }
 
+.autocomplete-suggestion{
+  cursor: pointer;
+}
+.autocomplete-suggestion:hover{
+  background-color: black;
+  text-shadow: 0px 0px 2px white;
+}
+
 .country .autocomplete-suggestions{
   background-color: rgba(30,35,43,0.9);
 }
