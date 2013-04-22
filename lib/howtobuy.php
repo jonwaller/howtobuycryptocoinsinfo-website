@@ -14,6 +14,9 @@ function generate_box($service){ ?>
     <div class="box-content">
       <?= $service["content"] ?>
     </div>
+    <div class="box-cta">
+      <a class="button" href="<?= $service["url"] ?>" target="_blank">Buy bitcoins</a>
+    </div>
   </div>
   <?php
 }

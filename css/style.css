@@ -1,19 +1,48 @@
 body{
-  background: #485566;/* url('/img/world.png') top center repeat-x;*/
+  background-color: #eee;
   color: #666;
-  font-family: 'Merriweather Sans', Helvetica, Verdana, Arial, sans-serif;
   margin: 0;
   padding: 0;
+  font-family: Helvetica, Verdana, Arial, sans-serif;
 }
 
-#titlearea{
-  width: 1024px;
-  background: url('/img/world.png') top center repeat-x;
-  margin: 0 auto;
+body, html{
+  width: 100%;
+  height: 100%;
+}
+
+#header{
+  position: absolute;
+  top: 2px;
+  width: 100%;
+  z-index: 7;
+}
+
+#header a{
+  color: #818FA6;
+  font-size: 15px;
+}
+
+#header a:hover{
   color: white;
-  position: relative;
-  min-height: 600px;
+}
+
+
+
+#headingarea{
+  background: #485566 url('/img/world.png') top center repeat-x;
+  color: white;
+  min-height: 100%;
   -webkit-transform: top;
+    font-family: 'Merriweather Sans', Helvetica, Verdana, Arial, sans-serif;
+
+}
+
+#maparea{
+  width: 1024px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100%;
 }
 
 a{
@@ -21,24 +50,33 @@ a{
   color: #485566;
 }
 
-#titlearea a{
-  color: white;
+#headingarea a{
+  color: #818FA6;
   text-decoration: none;
 }
 
+#headingarea a:hover{
+  color: white;
+}
 .autocomplete-suggestions{
   text-align: center;
   padding: 2px;
-  color: #444;
-  background-color: #eee;
+  color: #ccc;
+  margin: 3px;
+  border-radius:  4px;
+  background-color: rgba(0,0,0,0.5);
   /*text-transform: uppercase;*/
 }
 
-.autocomplete-suggestions strong{
-  color: black;
+.country .autocomplete-suggestions{
+  background-color: rgba(30,35,43,0.9);
 }
 
-#title{
+.autocomplete-suggestions strong{
+  color: white;
+}
+
+#heading{
   position: absolute;
   top: 250px;
   width: 460px;
@@ -51,16 +89,17 @@ a{
 #searchbox{
   width: 350px;
   margin: 15px;
-  border: 1px solid #ddd;
   line-height: 25px;
-  font-size: 18px;
+  font-size: 20px;
   padding: 1px 10px;
   text-transform: uppercase;
   text-align: center;
-  border: 2px solid #999;
+  border: 2px solid #485566;
   border-radius: 6px;
   color: #485566;
   font-family: 'Merriweather Sans', Helvetica, Verdana, Arial, sans-serif;
+  background-color: white;
+
 }
 
 .flagicon{
@@ -86,7 +125,7 @@ a{
 #infoarea{
   display: none;
   background-color: #eee;
-  border: 2px solid white;
+  border-top: 2px solid white;
   position: absolute;
   top: 100%;
   width: 100%;
@@ -104,7 +143,7 @@ a{
   display: inline-block;
   float: left;
   width: 290px;
-  margin: 10px 0px 30px 20px;
+  margin: 20px 0px 10px 20px;
   background-color: white;
   border: 2px solid #ddd;
   padding: 5px;
@@ -112,34 +151,65 @@ a{
 }
 
 .serviceBox a h3{
+  font-family: 'Merriweather Sans', Helvetica, Verdana, Arial, sans-serif;
+  font-size: 15px;
   color: white;
   background-color:  #485566;
   margin: 0;
   margin-left: 22px;
   padding: 3px;
   border-radius: 3px;
+  text-indent: 3px;
+}
+
+.serviceBox .box-cta{
+  text-align: right;
+  margin: 4px 1px;
+}
+
+.serviceBox a.button{
+  background-color: #F7931A;
+  border: 1px solid #BE7318;
+  text-shadow: 0 0 2px #BE7318;
+  border-radius: 3px;
+  padding: 3px 8px;
+  color: white;
+  position: relative;
+  left:0;
+  top:-1px;
+}
+
+.serviceBox a.button:hover{
+  border: 1px solid #BE7318;
+  text-shadow: 0 0 2px #fff;
+  top: 0;
 }
 
 .serviceBox a img{
-  margin-left: -23px;
+  margin-left: -26px;
+  margin-right: 3px;
 }
 
 .serviceBox .box-content{
-  margin-left: 22px;
+  margin-left: 25px;
   margin-right: 10px;
 }
 
-.country #titlearea{
+.country #headingarea{
   position: relative;
   top: -100px;
 }
 
-.country #title{
-  top:100px;
+.country #heading{
+  top:90px;
 }
 
 .country #infoarea{
   display: block;
   top: 250px;
+}
+
+#other{
+  display: none;
 }
 
