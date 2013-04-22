@@ -11,7 +11,7 @@ $currentcountry = $_REQUEST['country'];f
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>How to Buy Bitcoins</title>
+  <title>How to Buy Bitcoins<?php if ($currentcountry){ echo "in $countrynames[$currentcountry]"; } ?></title>
   <meta name="description" content="Ways to buy Bitcoins in your country. Payments by bank transfer, PayPal and phone, as well as many other methods.">
   <meta name="robots" content="index, follow" />
   <link rel="shortcut icon" href="/favicon.png" />
@@ -36,15 +36,16 @@ $currentcountry = $_REQUEST['country'];f
     echo "class='country'";
   endif;
 ?>>
-<?php if($currentcountry): ?>
 <style>
 #searchbox{
+  background-image: url(#);
+<?php if($currentcountry): ?>
   background-image: url(/img/miniflags/<?= $currentcountry ?>.png);
+<?php endif; ?>
   background-position: 5px 8px;
   background-repeat: no-repeat;
 }
 </style>
-<?php endif; ?>
 <div id="header">
     <div style="float: right">
       <a href="https://plus.google.com/112885603889814071692/" rel="author" style="text-decoration:none;">
@@ -65,9 +66,9 @@ $currentcountry = $_REQUEST['country'];f
 
   <div id="headingarea">
     <div id="maparea">
-    <a href="/jp.html" class="flagicon" id="flag_jp"><img src="img/flags/jp.png" width="48" height="48"><br>Japan</a>
-    <a href="/us.html" class="flagicon" id="flag_us"><img src="img/flags/us.png" width="48" height="48"><br>USA</a>
-    <a href="/uk.html" class="flagicon" id="flag_uk"><img src="img/flags/uk.png" width="48" height="48"><br>UK</a>
+    <a href="/jp.html" rel="jp" class="flagicon" id="flag_jp"><img src="img/flags/jp.png" width="48" height="48"><br>Japan</a>
+    <a href="/us.html" rel="us" class="flagicon" id="flag_us"><img src="img/flags/us.png" width="48" height="48"><br>USA</a>
+    <a href="/uk.html" rel="uk" class="flagicon" id="flag_uk"><img src="img/flags/uk.png" width="48" height="48"><br>UK</a>
     </div>
   <div id="other"><ul>
 <?php foreach($countrynames as $code=>$name): 
@@ -89,7 +90,7 @@ endif;
     </div>
 
     <div id="heading">
-      <img src="img/htbbi.png" width="381" height="126" alt="How to buy bitcoins in"><br>
+      <a href="/"><img border="0" src="img/htbbi.png" width="381" height="126" alt="How to buy bitcoins in"></a><br>
       <input type="text" id="searchbox" name="country" value="<?php if($currentcountry){ echo $countrynames[$currentcountry]; }?>" placeholder="Enter country name">
     </div>
 
@@ -98,10 +99,27 @@ endif;
   function loadCountry(code){
     $.get("/api.php?country="+code,function(data){
       $("body").addClass("country");
-      $("#results").html(data).masonry( 'destroy' )
-      $("#results").masonry({itemSelector:".serviceBox"})
+      $("#results").html(data).masonry( 'destroy' );
+      $("#results").masonry({itemSelector:".serviceBox"});
+      $("#searchbox").val(getCountryName[code]);
+      $("#searchbox").css({"background-image": "url(/img/miniflags/"+code+".png)"});
     })    
   }
+
+    function checkhash() {
+      if(window.location.hash){
+        loadCountry(window.location.hash.replace("#",""));
+        $("body").addClass("country");
+      }else{
+        $("body").removeClass("country");
+      }
+    }
+
+    function invalidateLinks(){
+      $("a[rel]").each(function(){
+        $(this).attr("href","/#"+$(this).attr("rel"));
+      })
+    }
 
   $(document).ready(function(){
     var countries = [];
@@ -112,11 +130,13 @@ endif;
       countries.push({value:name, data:code});
     }
 
+    invalidateLinks();
+
     $('#searchbox').autocomplete({
       lookup: countries,
       onSelect: function (suggestion) {
-        //loadCountry(suggestion.data);
-        window.location = "/"+suggestion.data+".html"
+        loadCountry(suggestion.data);
+        window.location = "/#"+suggestion.data
       }
     });
 
@@ -131,15 +151,8 @@ endif;
         commentsBoxContainer.innerHTML=newCommentBoxHtml; 
         FB.XFBML.parse(commentsBoxContainer);
       });
-
-
-    $(window).bind('hashchange', function() {
-      if(window.location.hash){
-        $("body").addClass("country");
-      }else{
-        $("body").removeClass("country");
-      }
-    });
+      $(window).bind('hashchange', checkhash);
+      checkhash();
   })
   </script>
 
