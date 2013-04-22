@@ -11,7 +11,7 @@ $currentcountry = $_REQUEST['country'];f
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>How to Buy Bitcoins<?php if ($currentcountry){ echo "in $countrynames[$currentcountry]"; } ?></title>
+  <title>How to Buy Bitcoins <?php if ($currentcountry){ echo "in $countrynames[$currentcountry]"; } ?></title>
   <meta name="description" content="Ways to buy Bitcoins in your country. Payments by bank transfer, PayPal and phone, as well as many other methods.">
   <meta name="robots" content="index, follow" />
   <link rel="shortcut icon" href="/favicon.png" />

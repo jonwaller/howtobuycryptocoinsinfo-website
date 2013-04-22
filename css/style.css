@@ -65,6 +65,8 @@ a{
   margin: 3px;
   border-radius:  4px;
   background-color: rgba(0,0,0,0.5);
+  max-height: 240px;
+  overflow: hidden;
   /*text-transform: uppercase;*/
 }
 
