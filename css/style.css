@@ -70,6 +70,7 @@ body, html{
   left: -118px;
   top: -16px;
   padding: 5px;
+  -webkit-transition: color 0.5s;
   box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
   z-index: 7;
 }
@@ -80,8 +81,11 @@ body, html{
   color: white;
   min-height: 550px;
   -webkit-transform: top;
-    font-family: 'Merriweather Sans', Helvetica, Verdana, Arial, sans-serif;
+    font-family: 'Ubuntu', Helvetica, Verdana, Arial, sans-serif;
+}
 
+h1,h2,h3,h4,h5{
+    font-family: 'Ubuntu', Helvetica, Verdana, Arial, sans-serif;  
 }
 
 #maparea{
@@ -98,6 +102,7 @@ a{
 
 #headingarea a{
   color: #818FA6;
+  -webkit-transition: color 0.2s;
   text-decoration: none;
 }
 
@@ -142,6 +147,26 @@ a{
   -webkit-transform: top 2s;
 }
 
+#heading h1{
+  margin: 0;
+  padding: 0;
+  font-size: 75px;
+  line-height: 68px;
+  font-family: 'Ubuntu', Helvetica, Verdana, Arial, sans-serif;
+  height: 126px;
+}
+
+#heading a{
+  text-shadow: 0px 0px 5px rgba(0,0,0,0.75);
+  color: #ccc;
+  -webkit-transition: color 0.5s;
+}
+
+#heading a:hover{
+  text-shadow: 0px 0px 5px rgba(0,0,0,1);
+  color: #ddd;
+}
+
 #searchbox{
   width: 350px;
   margin: 15px;
@@ -157,6 +182,7 @@ a{
   background-color: white;
 
 }
+
 
 .flagicon{
   position: absolute;
@@ -187,7 +213,7 @@ a{
   width: 100%;
   padding-top: 20px;
   min-height: 300px;
-  -webkit-transform: top;
+  -webkit-transition: top;
 }
 
 #results{
@@ -226,18 +252,19 @@ a{
 .serviceBox a.button{
   background-color: #F7931A;
   border: 1px solid #BE7318;
-  text-shadow: 0 0 2px #BE7318;
+  text-shadow: 0 0 2px rgba(0,0,0,0.5);
   border-radius: 3px;
   padding: 3px 8px;
   color: white;
   position: relative;
   left:0;
   top:-1px;
+  -webkit-transition: top 0.2s, text-shadow 0.2s;
 }
 
 .serviceBox a.button:hover{
   border: 1px solid #BE7318;
-  text-shadow: 0 0 2px #fff;
+  text-shadow: 0 0 2px #000;
   top: 0;
 }
 
@@ -254,6 +281,7 @@ a{
 .country #headingarea{
   position: relative;
   top: -100px;
+  -webkit-trainsition: top 0.5s;
   height: 350px;
   min-height: 0;
 }
@@ -266,6 +294,7 @@ a{
   display: block;
   position: relative;
   top: -100px;
+  -webkit-trainsition: top 0.5s;
 }
 
 

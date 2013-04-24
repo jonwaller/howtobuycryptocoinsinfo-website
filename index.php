@@ -22,6 +22,7 @@ $currentcountry = $_REQUEST['country'];f
   <meta property="og:description" content="Ways to buy Bitcoins in your country. Payments by bank transfer, PayPal and phone, as well as many other methods." />
   <meta property="og:image" content="http://<?=$_SERVER["SERVER_NAME"]?>/logo256.png" />
   <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>
 
   <script src="/js/jquery-1.9.min.js"></script>
   <script src="/js/jquery.migrate.js"></script>
@@ -66,9 +67,9 @@ $currentcountry = $_REQUEST['country'];f
 
   <div id="headingarea">
     <div id="maparea">
-    <a href="/jp.html" rel="jp" class="flagicon" id="flag_jp"><img src="img/flags/jp.png" width="48" height="48"><br>Japan</a>
-    <a href="/us.html" rel="us" class="flagicon" id="flag_us"><img src="img/flags/us.png" width="48" height="48"><br>USA</a>
-    <a href="/uk.html" rel="uk" class="flagicon" id="flag_uk"><img src="img/flags/uk.png" width="48" height="48"><br>UK</a>
+    <a href="/jp.html" rel="jp" class="ajaxlink flagicon" id="flag_jp"><img src="img/flags/jp.png" width="48" height="48"><br>Japan</a>
+    <a href="/us.html" rel="us" class="ajaxlink flagicon" id="flag_us"><img src="img/flags/us.png" width="48" height="48"><br>USA</a>
+    <a href="/uk.html" rel="uk" class="ajaxlink flagicon" id="flag_uk"><img src="img/flags/uk.png" width="48" height="48"><br>UK</a>
     </div>
   </div>
 
@@ -87,14 +88,14 @@ endif;
       <h3>You can buy bitcoins in these countries:</h3>
 <?php foreach($countrynames as $code=>$name): 
         if( ! in_array($code, $promoted) ): ?>
-        <div class="countrylink"><a title="<?= $name ?>" href="/<?= $code ?>.html"><span class="countrycode"><?= $code ?></span><span class="countryname"><?= $name ?></span></a></div>
+        <div class="countrylink"><a  rel="<?= $code ?>" title="<?= $name ?>" href="/<?= $code ?>.html"><span class="countrycode"><?= $code ?></span><span class="countryname"><?= $name ?></span></a></div>
 <?        endif;
       endforeach; ?>
       <br style="clear: both">
     </div>
 
     <div id="heading">
-      <a href="/"><img border="0" src="img/htbbi.png" width="381" height="126" alt="How to buy bitcoins in"></a><br>
+      <h1><a href="/">How to buy<br>Bitcoins in</a></h1>
       <input type="text" id="searchbox" name="country" value="<?php if($currentcountry){ echo $countrynames[$currentcountry]; }?>" placeholder="Enter country name">
     </div>
 
@@ -125,7 +126,7 @@ endif;
     }
 
     function invalidateLinks(){
-      $("a.flagicon[rel]").each(function(){
+      $("a.ajaxlink[rel]").each(function(){
         $(this).attr("href","/#"+$(this).attr("rel"));
       })
     }
