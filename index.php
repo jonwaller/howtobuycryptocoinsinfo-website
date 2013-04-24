@@ -125,7 +125,7 @@ endif;
     }
 
     function invalidateLinks(){
-      $("a[rel]").each(function(){
+      $("a.flagicon[rel]").each(function(){
         $(this).attr("href","/#"+$(this).attr("rel"));
       })
     }
