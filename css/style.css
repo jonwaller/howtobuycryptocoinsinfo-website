@@ -178,7 +178,7 @@ a{
   border: 2px solid #485566;
   border-radius: 6px;
   color: #485566;
-  font-family: 'Merriweather Sans', Helvetica, Verdana, Arial, sans-serif;
+  font-family: 'Ubuntu', Helvetica, Verdana, Arial, sans-serif;
   background-color: white;
 
 }
@@ -233,7 +233,7 @@ a{
 }
 
 .serviceBox a h3{
-  font-family: 'Merriweather Sans', Helvetica, Verdana, Arial, sans-serif;
+  font-family: 'Ubuntu', Helvetica, Verdana, Arial, sans-serif;
   font-size: 15px;
   color: white;
   background-color:  #485566;
