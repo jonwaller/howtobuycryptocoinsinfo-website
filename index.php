@@ -95,7 +95,7 @@ endif;
     </div>
 
     <div id="heading">
-      <h1><a href="/">How to buy<br>Bitcoins in</a></h1>
+      <h1><a href="/">How to buy<br><img src="/img/logo64.png" align="baseline" width="64" height="64" alt="">bitcoins in</a></h1>
       <input type="text" id="searchbox" name="country" value="<?php if($currentcountry){ echo $countrynames[$currentcountry]; }?>" placeholder="Enter country name">
     </div>
 
