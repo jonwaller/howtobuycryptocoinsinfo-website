@@ -70,13 +70,7 @@ $currentcountry = $_REQUEST['country'];f
     <a href="/us.html" rel="us" class="flagicon" id="flag_us"><img src="img/flags/us.png" width="48" height="48"><br>USA</a>
     <a href="/uk.html" rel="uk" class="flagicon" id="flag_uk"><img src="img/flags/uk.png" width="48" height="48"><br>UK</a>
     </div>
-  <div id="other"><ul>
-<?php foreach($countrynames as $code=>$name): 
-        if( ! in_array($code, $promoted) ): ?>
-        <li><a href="/<?= $code ?>.html"><?= $name ?></a></li>
-<?        endif;
-      endforeach; ?>
-    </ul></div>  </div>
+  </div>
 
     <div id="infoarea">
       <div id="results">
@@ -89,12 +83,22 @@ endif;
       </div>
     </div>
 
+    <div id="footer">
+      <h3>You can buy bitcoins in these countries:</h3>
+<?php foreach($countrynames as $code=>$name): 
+        if( ! in_array($code, $promoted) ): ?>
+        <div class="countrylink"><a title="<?= $name ?>" href="/<?= $code ?>.html"><span class="countrycode"><?= $code ?></span><span class="countryname"><?= $name ?></span></a></div>
+<?        endif;
+      endforeach; ?>
+      <br style="clear: both">
+    </div>
+
     <div id="heading">
       <a href="/"><img border="0" src="img/htbbi.png" width="381" height="126" alt="How to buy bitcoins in"></a><br>
       <input type="text" id="searchbox" name="country" value="<?php if($currentcountry){ echo $countrynames[$currentcountry]; }?>" placeholder="Enter country name">
     </div>
 
-  <script>
+  <script type="text/javascript">
 
   function loadCountry(code){
     $("#searchbox").val(getCountryName[code]);
@@ -115,7 +119,8 @@ endif;
         loadCountry(window.location.hash.replace("#",""));
         $("body").addClass("country");
       }else{
-        $("body").removeClass("country");
+        if(window.location.pathname.length<2)
+          $("body").removeClass("country");
       }
     }
 
@@ -177,7 +182,7 @@ endif;
 
 </script>
 
-<script>
+<script type="text/javascript">
   window.fbAsyncInit = function() {
     // init the FB JS SDK
     FB.init({
