@@ -3,7 +3,7 @@
 require_once("lib/spyc.php");
 require_once("lib/howtobuy.php");
 
-$countrynames = Spyc::YAMLLoad("data/countries.yaml"); 
+$countrynames = Spyc::YAMLLoad("data/countries-sorted.yaml"); 
 $currentcountry = $_REQUEST['country'];f
 
 ?>
@@ -88,7 +88,7 @@ endif;
       <h3>You can buy bitcoins in these countries:</h3>
 <?php foreach($countrynames as $code=>$name): 
         if( ! in_array($code, $promoted) ): ?>
-        <div class="countrylink"><a  rel="<?= $code ?>" title="<?= $name ?>" href="/<?= $code ?>.html"><span class="countrycode"><?= $code ?></span><span class="countryname"><?= $name ?></span></a></div>
+        <div class="countrylink"><a  rel="<?= $code ?>" title="<?= $name ?>" href="/<?= $code ?>.html"><span class="countrycode"><?= $code ?></span> <span class="countryname"><?= $name ?></span></a></div>
 <?        endif;
       endforeach; ?>
       <br style="clear: both">
