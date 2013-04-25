@@ -85,6 +85,7 @@ endif;
     </div>
 
     <div id="footer">
+      <div id="footercontent">
       <h3>You can buy bitcoins in these countries:</h3>
 <?php foreach($countrynames as $code=>$name): 
         if( ! in_array($code, $promoted) ): ?>
@@ -92,6 +93,7 @@ endif;
 <?        endif;
       endforeach; ?>
       <br style="clear: both">
+    </div>
     </div>
 
     <div id="heading">

@@ -31,7 +31,13 @@ body, html{
   color: #ccc;
   background-color: white;
   border-top: 2px solid #eee;
-  padding: 10px 100px;
+  padding: 10px;
+}
+
+#footercontent{
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 #footer .countrylink{
@@ -89,9 +95,12 @@ h1,h2,h3,h4,h5{
 }
 
 #maparea{
-  width: 1024px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 -512px;
   position: relative;
+  overflow: hidden;
+  left: 50%;
   min-height: 100%;
 }
 
@@ -217,7 +226,8 @@ a{
 }
 
 #results{
-  width: 1024px;
+  width: 100%;
+  max-width: 1024px;
   margin: 0 auto;
 }
 
