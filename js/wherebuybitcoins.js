@@ -14,8 +14,7 @@ var flagsBecameSmall=false;
      gf:"French Guiana",
      ge:"Georgia",
      gd:"Grenada",
-     gb:"United Kingdom", //Not using this
-     uk:"United Kingdom",
+     uk:"United Kingdom (Great Britain)",
      ga:"Gabon",
      gn:"Guinea",
      gm:"Gambia",
@@ -161,7 +160,7 @@ var flagsBecameSmall=false;
      mo:"Macao",
      mn:"Mongolia",
      mh:"Marshall Islands",
-     us:"United States",
+     us:"United States (USA / Northern America)",
      um:"United States Minor Outlying Islands",
      mt:"Malta",
      mw:"Malawi",

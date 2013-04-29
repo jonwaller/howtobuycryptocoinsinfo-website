@@ -4,14 +4,14 @@ require_once("lib/spyc.php");
 require_once("lib/howtobuy.php");
 
 $countrynames = Spyc::YAMLLoad("data/countries-sorted.yaml"); 
-$currentcountry = $_REQUEST['country'];f
+$currentcountry = $_REQUEST['country'];
 
 ?>
 <?='<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">'?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>How to Buy Bitcoins <?php if ($currentcountry){ echo "in $countrynames[$currentcountry]"; } ?></title>
+  <title>How to Buy Bitcoins <?php if ($currentcountry){ echo "in ".$countrynames[$currentcountry]; } ?></title>
   <meta name="description" content="Ways to buy Bitcoins in your country. Payments by bank transfer, PayPal and phone, as well as many other methods.">
   <meta name="robots" content="index, follow" />
   <link rel="shortcut icon" href="/favicon.png" />
@@ -87,11 +87,9 @@ endif;
     <div id="footer">
       <div id="footercontent">
       <h3>You can buy bitcoins in these countries:</h3>
-<?php foreach($countrynames as $code=>$name): 
-        if( ! in_array($code, $promoted) ): ?>
+<?php foreach($countrynames as $code=>$name):?>
         <div class="countrylink"><a  rel="<?= $code ?>" title="<?= $name ?>" href="/<?= $code ?>.html"><span class="countrycode"><?= $code ?></span> <span class="countryname"><?= $name ?></span></a></div>
-<?        endif;
-      endforeach; ?>
+<? endforeach; ?>
       <br style="clear: both">
     </div>
     </div>

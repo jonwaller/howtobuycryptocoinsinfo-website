@@ -149,8 +149,8 @@ a{
 #heading{
   position: absolute;
   top: 250px;
-  width: 460px;
-  left: 50%;
+  width: 610px;
+  left: 45%;
   margin-left: -230px;
   text-align: center;
   -webkit-transform: top 2s;
@@ -177,7 +177,7 @@ a{
 }
 
 #searchbox{
-  width: 350px;
+  width: 500px;
   margin: 15px;
   line-height: 25px;
   font-size: 20px;
