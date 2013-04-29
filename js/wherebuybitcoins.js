@@ -160,7 +160,7 @@ var flagsBecameSmall=false;
      mo:"Macao",
      mn:"Mongolia",
      mh:"Marshall Islands",
-     us:"United States (USA / Northern America)",
+     us:"United States (USA / N. America)",
      um:"United States Minor Outlying Islands",
      mt:"Malta",
      mw:"Malawi",

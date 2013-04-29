@@ -149,8 +149,8 @@ a{
 #heading{
   position: absolute;
   top: 250px;
-  width: 610px;
-  left: 45%;
+  width: 460px;
+  left: 50%;
   margin-left: -230px;
   text-align: center;
   -webkit-transform: top 2s;
@@ -177,7 +177,7 @@ a{
 }
 
 #searchbox{
-  width: 500px;
+  width: 390px;
   margin: 15px;
   line-height: 25px;
   font-size: 20px;
@@ -205,7 +205,7 @@ a{
 
 #flag_us{
   top: 200px;
-  left: 220px;
+  left: 200px;
 }
 
 #flag_uk{
