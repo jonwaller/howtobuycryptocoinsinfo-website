@@ -49,7 +49,7 @@ $currentcountry = $_REQUEST['country'];
 </style>
 <div id="header">
     <div style="float: right">
-      <a href="mailto:info@howtobuybitcoins.info">Email me</a> |
+      <a href="mailto:info@howtobuybitcoins.info">Corrections / Updates?</a> |
       <a href="https://github.com/jonwaller/howtobuybitcoinsinfo-website">Contribute on Github</a>
     </div>  
 
