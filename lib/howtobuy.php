@@ -1,4 +1,4 @@
-<?php 
+<?
 
 function generate_box($service){ ?>
   <div class="serviceBox <?php 

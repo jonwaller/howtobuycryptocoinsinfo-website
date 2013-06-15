@@ -75,7 +75,7 @@ $currentcountry = $_REQUEST['country'];
     <div id="infoarea">
       <div id="results">
         <?php
-if(currentcountry):
+if($currentcountry):
   $data = get_service_data("data/services.yaml");
   generate_country_boxes($data, $currentcountry);
 endif;
@@ -97,7 +97,7 @@ endif;
             <img src="//ssl.gstatic.com/images/icons/gplus-16.png"
                  alt="Google+"
                  style="border:0;width:16px;height:16px;vertical-align: top;"/>
-          </a> Author: <a href="http://www.jonwaller.net/">Jonathan Waller</a> |
+          </a>
           <a href="http://bitcoineast.com">This is a BitcoinEAST project</a>
       </div>
     </div>
@@ -136,12 +136,14 @@ endif;
 
     function invalidateLinks(){
       $("a.ajaxlink[rel]").each(function(){
-        $(this).attr("href","/#"+$(this).attr("rel"));
+        //$(this).attr("href","/#"+$(this).attr("rel"));
       })
     }
 
   $(document).ready(function(){
-    var countries = [];
+
+
+      var countries = [];
     $("#results").masonry({itemSelector:".serviceBox"});
 
     for(var code in getCountryName){
@@ -154,8 +156,8 @@ endif;
     $('#searchbox').autocomplete({
       lookup: countries,
       onSelect: function (suggestion) {
-        loadCountry(suggestion.data);
-        window.location = "/#"+suggestion.data
+        //loadCountry(suggestion.data);
+        window.location = "/"+suggestion.data+".html";
       }
     });
 
