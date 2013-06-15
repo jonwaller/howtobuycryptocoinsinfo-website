@@ -134,7 +134,7 @@ endif;
             commentsBoxContainer.removeChild(commentsBoxContainer.lastChild);
         }
         
-        var newCommentBoxHtml='';;
+        var newCommentBoxHtml='';
         commentsBoxContainer.innerHTML=newCommentBoxHtml; 
         FB.XFBML.parse(commentsBoxContainer);
       });
