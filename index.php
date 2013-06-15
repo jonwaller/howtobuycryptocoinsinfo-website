@@ -49,7 +49,8 @@ $currentcountry = $_REQUEST['country'];
 </style>
 <div id="header">
     <div style="float: right">
-      <a href="mailto:info@howtobuybitcoins.info">Email me</a> | <a href="https://github.com/jonwaller/howtobuybitcoinsinfo-website">Help out on Github</a> | <a href="http://bitcoineast.com">This is a BitcoinEAST project</a>
+      <a href="mailto:info@howtobuybitcoins.info">Email me</a> |
+      <a href="https://github.com/jonwaller/howtobuybitcoinsinfo-website">Contribute on Github</a>
     </div>  
 
     <div id="facebookCommentsBox"><div class="fb-comments" data-href="" data-num-posts="20" data-width="500"></div></div>
@@ -88,10 +89,17 @@ endif;
 <?php foreach($countrynames as $code=>$name):?>
         <div class="countrylink"><a  rel="<?= $code ?>" title="<?= $name ?>" href="/<?= $code ?>.html"><span class="countrycode"><?= $code ?></span> <span class="countryname"><?= $name ?></span></a></div>
 <? endforeach; ?>
-      <br style="clear: both">
-      <a href="https://plus.google.com/112885603889814071692/" rel="author" style="text-decoration:none;">
-              <img src="//ssl.gstatic.com/images/icons/gplus-16.png" alt="Google+" style="border:0;width:16px;height:16px;vertical-align: top;"/>
-            </a> <a href="http://www.jonwaller.net/">Me</a>
+      <br style="clear: both" />
+      <br style="clear: both" />
+
+      <div style="text-align: center">
+          <a href="https://plus.google.com/112885603889814071692/" rel="author" style="text-decoration:none;">
+            <img src="//ssl.gstatic.com/images/icons/gplus-16.png"
+                 alt="Google+"
+                 style="border:0;width:16px;height:16px;vertical-align: top;"/>
+          </a> Author: <a href="http://www.jonwaller.net/">Jonathan Waller</a> |
+          <a href="http://bitcoineast.com">This is a BitcoinEAST project</a>
+      </div>
     </div>
     </div>
 
