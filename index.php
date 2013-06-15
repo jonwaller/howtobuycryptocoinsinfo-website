@@ -105,45 +105,14 @@ endif;
 
     <div id="heading">
       <h1><a href="/">How to buy<br>bitcoins in</a></h1>
-      <input type="text" id="searchbox" name="country" value="<?php if($currentcountry){ echo $countrynames[$currentcountry]; }?>" placeholder="Enter country name">
+      <input type="text" id="searchbox" onClick="this.select();" name="country" value="<?php if($currentcountry){ echo $countrynames[$currentcountry]; }?>" placeholder="Enter country name">
     </div>
 
   <script type="text/javascript">
 
-  function loadCountry(code){
-    $("#searchbox").val(getCountryName[code]);
-    $("#searchbox").css({"background-image": "url(/img/miniflags/"+code+".png)"});
-    $(".serviceBox").fadeOut(function(){
-      $.get("/api.php?country="+code,function(data){
-        $("body").addClass("country");
-        $("#results").html(data).masonry( 'destroy' );
-        $("#results").masonry({itemSelector:".serviceBox"});
-        $("#results .serviceBox").hide();
-        $("#results .serviceBox").fadeIn("slow");
-      });
-    })
-  }
-
-    function checkhash() {
-      if(window.location.hash){
-        loadCountry(window.location.hash.replace("#",""));
-        $("body").addClass("country");
-      }else{
-        if(window.location.pathname.length<2)
-          $("body").removeClass("country");
-      }
-    }
-
-    function invalidateLinks(){
-      $("a.ajaxlink[rel]").each(function(){
-        //$(this).attr("href","/#"+$(this).attr("rel"));
-      })
-    }
-
   $(document).ready(function(){
 
-
-      var countries = [];
+    var countries = [];
     $("#results").masonry({itemSelector:".serviceBox"});
 
     for(var code in getCountryName){
@@ -151,12 +120,9 @@ endif;
       countries.push({value:name, data:code});
     }
 
-    invalidateLinks();
-
     $('#searchbox').autocomplete({
       lookup: countries,
       onSelect: function (suggestion) {
-        //loadCountry(suggestion.data);
         window.location = "/"+suggestion.data+".html";
       }
     });
@@ -172,8 +138,6 @@ endif;
         commentsBoxContainer.innerHTML=newCommentBoxHtml; 
         FB.XFBML.parse(commentsBoxContainer);
       });
-      $(window).bind('hashchange', checkhash);
-      checkhash();
   })
   </script>
 
