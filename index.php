@@ -49,9 +49,7 @@ $currentcountry = $_REQUEST['country'];
 </style>
 <div id="header">
     <div style="float: right">
-      <a href="https://plus.google.com/112885603889814071692/" rel="author" style="text-decoration:none;">
-        <img src="//ssl.gstatic.com/images/icons/gplus-16.png" alt="Google+" style="border:0;width:16px;height:16px;vertical-align: top;"/>
-      </a> <a href="http://www.jonwaller.net/">Me</a> | <a href="mailto:info@howtobuybitcoins.info">Comments / Updates?</a>
+      <a href="mailto:info@howtobuybitcoins.info">Comments / Updates?</a>
     </div>  
 
     <div id="facebookCommentsBox"><div class="fb-comments" data-href="" data-num-posts="20" data-width="500"></div></div>
@@ -91,6 +89,9 @@ endif;
         <div class="countrylink"><a  rel="<?= $code ?>" title="<?= $name ?>" href="/<?= $code ?>.html"><span class="countrycode"><?= $code ?></span> <span class="countryname"><?= $name ?></span></a></div>
 <? endforeach; ?>
       <br style="clear: both">
+      <a href="https://plus.google.com/112885603889814071692/" rel="author" style="text-decoration:none;">
+              <img src="//ssl.gstatic.com/images/icons/gplus-16.png" alt="Google+" style="border:0;width:16px;height:16px;vertical-align: top;"/>
+            </a> <a href="http://www.jonwaller.net/">Me</a>
     </div>
     </div>
 
@@ -165,7 +166,6 @@ endif;
       checkhash();
   })
   </script>
-
 
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
     
