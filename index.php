@@ -26,9 +26,9 @@ $currentcountry = $_REQUEST['country'];
   <link href='http://fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>
 
   <script src="/js/jquery-1.9.min.js"></script>
+  <script src="/js/jquery-ui-1.10.3.custom.min.js"></script>
   <script src="/js/jquery.migrate.js"></script>
   <script src="/js/jquery.placeholder.js"></script>
-  <script src="/js/jquery.autocomplete.min.js"></script>
   <script src="/js/jquery.masonry.js"></script>
   <script src="/js/wherebuybitcoins.js"></script>
 
@@ -111,6 +111,15 @@ endif;
 
   <script type="text/javascript">
 
+  //Hack to allow to highlight in search result
+  $.ui.autocomplete.prototype._renderItem = function (ul, item) {
+    item.label = item.label.replace(new RegExp("(?![^&;]+;)(?!<[^<>]*)(" + $.ui.autocomplete.escapeRegex(this.term) + ")(?![^<>]*>)(?![^&;]+;)", "gi"), "<strong>$1</strong>");
+    return $("<li></li>")
+    .data("item.autocomplete", item)
+    .append("<a>" + item.label + "</a>")
+    .appendTo(ul);
+  };
+
   $(document).ready(function(){
 
     var countries = [];
@@ -122,9 +131,11 @@ endif;
     }
 
     $('#searchbox').autocomplete({
-      lookup: countries,
-      onSelect: function (suggestion) {
-        window.location = "/"+suggestion.data+".html";
+      source: countries,
+      autoFocus: true,
+      delay: 100,
+      select: function (e,ui) {
+        window.location = "/"+ui.item.data+".html";
       }
     });
 
