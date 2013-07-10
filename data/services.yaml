@@ -270,3 +270,11 @@ bitcointalk-otc:
   url: https://bitcointalk.org/index.php?board=53.0
   content:|
       <p>Over-the-counter exchange. Find a direct seller online to buy and sell bitcoin with.</p>
+      
+cavirtex:
+  countries: [ca]
+  icon: https://www.cavirtex.com/favicon.ico
+  label: Canadian Virtual Exchange
+  url: https://www.cavirtex.com/
+  content:|
+    <p>Canadian exchange offering both cash deposit and EFT direct transfer with Canadian banks.</p>
