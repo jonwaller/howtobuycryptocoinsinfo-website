@@ -61,8 +61,9 @@ $currentcountry = $_REQUEST['country'];
       <a href="mailto:info@howtobuybitcoins.info">Corrections / Updates?</a> |
       <a href="https://github.com/jonwaller/howtobuybitcoinsinfo-website">Contribute on Github</a>
     </div>  
-
+<?/*
     <div id="facebookCommentsBox"><div class="fb-comments" data-href="" data-num-posts="20" data-width="500"></div></div>
+*/?>
     <!-- AddThis Button BEGIN -->
     <div class="addthis_toolbox addthis_default_style">
       <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
@@ -70,7 +71,6 @@ $currentcountry = $_REQUEST['country'];
       <a class="addthis_button_google_plusone_share"></a>
       <a class="addthis_button_email"></a>
     </div>
-
 </div>
 
   <div id="headingarea">
@@ -225,7 +225,7 @@ $currentcountry = $_REQUEST['country'];
       }
     });
 
-
+/*
       fbEnsureInit(function() {
         var commentsBoxContainer=document.getElementById('facebookCommentsBox');
         while (commentsBoxContainer.hasChildNodes()) {
@@ -236,6 +236,7 @@ $currentcountry = $_REQUEST['country'];
         commentsBoxContainer.innerHTML=newCommentBoxHtml; 
         FB.XFBML.parse(commentsBoxContainer);
       });
+      */
   })
   </script>
 
@@ -254,7 +255,7 @@ $currentcountry = $_REQUEST['country'];
   })();
 
 </script>
-
+<?/*
 <script type="text/javascript">
   window.fbAsyncInit = function() {
     // init the FB JS SDK
@@ -279,7 +280,7 @@ $currentcountry = $_REQUEST['country'];
     js = d.createElement('script'); js.id = id; js.async = true;
     js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
     ref.parentNode.insertBefore(js, ref);
-  }(document, /*debug*/ false));
+  }(document, false));
 
   function fbEnsureInit(callback) {
     if(!window.fbApiInit) {
@@ -290,6 +291,7 @@ $currentcountry = $_REQUEST['country'];
       }
     }
   }
+  */?>
 </script>
 
 </body>
