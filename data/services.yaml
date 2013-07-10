@@ -273,7 +273,7 @@ bitcointalk-otc:
       
 cavirtex:
   countries: [ca]
-  icon: https://www.cavirtex.com/favicon.ico
+  icon: /favicon.png
   label: Canadian Virtual Exchange
   url: https://www.cavirtex.com/
   content:|
