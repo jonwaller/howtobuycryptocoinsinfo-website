@@ -278,3 +278,11 @@ cavirtex:
   url: https://www.cavirtex.com/
   content:|
     <p>Canadian exchange offering both cash deposit and EFT direct transfer with Canadian banks.</p>
+
+kapiton:
+  countries: [se]
+  icon: https://kapiton.se/favicon.ico
+  label: Kapiton
+  url: https://kapiton.se/
+  content:|
+    <p>This exchange is registered, but not regulated by, the financial inspector in Sweden.</p>
