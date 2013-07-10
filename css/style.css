@@ -269,6 +269,10 @@ a{
   text-indent: 3px;
 }
 
+.warningBox h3 img{
+  cursor:pointer;
+}
+
 .warningBox .box-content{
   margin-left: 25px;
   margin-right: 10px;
