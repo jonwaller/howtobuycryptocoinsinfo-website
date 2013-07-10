@@ -118,31 +118,40 @@ a{
 #headingarea a:hover{
   color: white;
 }
-.autocomplete-suggestions{
+.ui-autocomplete{
   text-align: center;
   padding: 2px;
   color: #ccc;
   margin: 3px;
   border-radius:  4px;
+  background-color: #000;
   background-color: rgba(0,0,0,0.5);
   max-height: 240px;
+  max-width: 408px;
   overflow: hidden;
   /*text-transform: uppercase;*/
 }
-
-.autocomplete-suggestion{
-  cursor: pointer;
+.ui-autocomplete a{
+  color: #ccc;
 }
-.autocomplete-suggestion:hover{
+
+.ui-menu-item{
+  cursor: pointer;
+  list-style-type: none;
+}
+.ui-menu-item:hover{
   background-color: black;
   text-shadow: 0px 0px 2px white;
 }
+.ui-helper-hidden-accessible{
+  display: none;
+}
 
-.country .autocomplete-suggestions{
+.country .ui-autocomplete{
   background-color: rgba(30,35,43,0.9);
 }
 
-.autocomplete-suggestions strong{
+.ui-autocomplete strong{
   color: white;
 }
 
