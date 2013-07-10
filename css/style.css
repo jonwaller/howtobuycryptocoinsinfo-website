@@ -301,7 +301,15 @@ a{
   text-indent: 3px;
 }
 
-.serviceBox .box-cta{
+.serviceBox .left{
+  width:45%;
+  float:left;
+  text-align: left;
+  margin: 4px 1px 4px 22px;
+}
+.serviceBox .right{
+  width:45%;
+  float:right;
   text-align: right;
   margin: 4px 1px;
 }

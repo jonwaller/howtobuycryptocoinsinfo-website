@@ -48,6 +48,14 @@ $currentcountry = $_REQUEST['country'];
   background-repeat: no-repeat;
 }
 </style>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=268112269983311";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div id="header">
     <div style="float: right">
       <a href="mailto:info@howtobuybitcoins.info">Corrections / Updates?</a> |
