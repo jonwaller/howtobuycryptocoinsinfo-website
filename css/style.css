@@ -225,10 +225,44 @@ a{
   -webkit-transition: top;
 }
 
+#warningarea{
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
 #results{
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
+}
+
+.warningBox{
+  display: inline-block;
+  float: left;
+  width: 963px;
+  margin: 20px 20px 10px 20px;
+  background-color: white;
+  border: 2px solid #ddd;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.warningBox h3{
+  font-family: 'Ubuntu', Helvetica, Verdana, Arial, sans-serif;
+  font-size: 15px;
+  color: white;
+  background-color:  #485566;
+  margin: 0;
+  margin-left: 22px;
+  padding: 3px;
+  border-radius: 3px;
+  text-indent: 3px;
+}
+
+.warningBox .box-content{
+  margin-left: 25px;
+  margin-right: 10px;
 }
 
 .serviceBox{

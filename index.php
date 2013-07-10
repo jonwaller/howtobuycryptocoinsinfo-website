@@ -74,12 +74,29 @@ $currentcountry = $_REQUEST['country'];
   </div>
 
     <div id="infoarea">
+
+      <div id="warningarea">
+        <div class="warningBox">
+          <h3 class="box-title">Warning: Please be careful with your money.</h3>
+          <div class="box-content">
+            <p>
+              <small>
+              When sending money to an exchange, you are trusting the operator to not steal your funds, and that their site is secure. <br/><br/>
+              It is recommended you obtain the real-world identity of the operator and ensure that sufficient recourse is available.<br/>
+              Exchanging or storing significant amounts of funds with third-parties is not recommended.<br/><br/>
+              Bitcoin services are not highly regulated so a service can continue operating even when it is widely believed that it is insecure or dishonest. Also, webpages recommending them (such as this one) may not be regularly updated. (However, saying that, the site is <a href="https://github.com/jonwaller/howtobuybitcoinsinfo-website">open-source</a>, and I try to respond quickly to <a href="mailto:info@howtobuybitcoins.info">emails</a>.)
+              </small>
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div id="results">
-        <?php
-if($currentcountry):
-  $data = get_service_data("data/services.yaml");
-  generate_country_boxes($data, $currentcountry);
-endif;
+        <?
+          if($currentcountry):
+            $data = get_service_data("data/services.yaml");
+            generate_country_boxes($data, $currentcountry);
+          endif;
         ?>
       </div>
     </div>
@@ -114,6 +131,7 @@ endif;
   $(document).ready(function(){
 
     var countries = [];
+    $("#warningarea").masonry({itemSelector:".warningBox"});
     $("#results").masonry({itemSelector:".serviceBox"});
 
     for(var code in getCountryName){
