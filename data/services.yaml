@@ -1,5 +1,6 @@
 mtgox:
   countries: [af, ax, al, dz, as, ad, ao, ai, aq, ag, ar, am, aw, au, at, az, bs, bh, bd, bb, by, be, bz, bj, bm, bt, bo, ba, bw, bv, br, io, bn, bg, bf, bi, kh, cm, ca, cv, ky, cf, td, cl, cn, cx, cc, co, km, cg, cd, ck, cr, ci, hr, cu, cy, cz, dk, dj, dm, do, ec, eg, sv, gq, er, ee, et, fk, fo, fj, fi, fr, gf, pf, tf, ga, gm, ge, de, gh, gi, gr, gl, gd, gp, gu, gt, gg, gn, gw, gy, ht, hm, va, hn, hk, hu, is, in, id, ir, iq, ie, im, il, it, jm, jp, je, jo, kz, ke, ki, kp, kr, kw, kg, la, lv, lb,  ls, lr, ly, li, lt, lu, mo, mk, mg, mw, my, mv, ml, mt, mh, mq, mr, mu, yt, mx, fm, md, mc, mn, me, ms, ma, mz, mm, na, nr, np, nl, an, nc, nz, ni, ne, ng, nu, nf, mp, no, om, pk, pw, ps, pa, pg, py, pe, ph, pn, pl, pt, pr, qa, re, ro, ru, rw, sh, kn, lc, pm, vc, ws, sm, st, sa, sn, rs, sc, sl, sg, sk, si, sb, so, za, gs, es, lk, sd, sr, sj, sz, se, ch, sy, tw, tj, tz, th, tl, tg, tk, to, tt, tn, tr, tm, tc, tv, ug, ua, ae, uk, us, um, uy, uz, vu, ve, vn, vg, vi, wf, eh, ye, zm, zw]
+  location: [jp]
   icon: https://mtgox.com/favicon.ico
   label: Mt. Gox
   url: https://mtgox.com/
@@ -8,7 +9,7 @@ mtgox:
 
 bitinstant:
   countries: [bs, ky, kz, pr, ru, tc, ua, us, vg, vi]
-  priority: [us]
+  location: [us]
   icon: /favicon.png
   label: BitInstant.com
   url: https://bitinstant.com/
@@ -17,6 +18,7 @@ bitinstant:
 
 posteb:
   countries: [it]
+  location: [it]
   icon: /favicon.png
   label: PosteB.it
   url: http://www.posteb.it/
@@ -25,6 +27,7 @@ posteb:
 
 blockchain-uk:
   countries: [uk]
+  location: [uk]
   icon: https://blockchain.info/favicon.ico
   url: https://blockchain.info/wallet/deposit-bank-transfer
   label: Bank transfer (Blockchain.info)
@@ -33,6 +36,7 @@ blockchain-uk:
 
 blockchain:
   countries: [ar, au, at, be, ba, bg, ca, cl, hr, cz, dk, ee, fi, fr, de, gr, hk, id, ie, il, it, lv, lt, lu, mx, nl, nz, no, pl, pt, ro, ru, sk, za, es, se, ch, tw, tr, ua, uk, us]
+  location: [uk]
   icon: https://blockchain.info/favicon.ico
   label: SMS Phone Deposits (Blockchain.info)
   url: https://blockchain.info/wallet/sms-phone-deposits
@@ -42,6 +46,7 @@ blockchain:
 bitbargain:
   label: BitBargain.co.uk
   countries: [uk]
+  location: [uk]
   icon: /favicon.png
   label: BitBargain.co.uk
   url: https://bitbargain.co.uk/
@@ -51,24 +56,26 @@ bitbargain:
 coinbase:
   label: Coinbase.com
   countries: [us]
-  priority: [us]
+  location: [us]
   icon: https://coinbase.com/favicon.ico
   url: https://coinbase.com/
   content:|
       <p>A PayPal-style Internet wallet. Connect a US bank account to buy bitcoins.</p>
 
-"BitcoinsChile.cl":
+bitcoinschile:
   label: BitcoinsChile.cl
-  countries: [cl us uk au ca fr de in it mx ph ru es at be dk ee fi gr ie lu nl nz no pl pt se ch]
+  countries: [cl, us, uk, au, ca, fr, de, in, it, mx, ph, ru, es, at, be, dk, ee, fi, gr, ie, lu, nl, nz, no, pl, pt, se, ch]
+  location: [cl]
   icon: http://portal.bitcoinschile.cl/wp-content/uploads/2012/10/favicon2.ico
   url: http://portal.bitcoinschile.cl/
   content:|
       <p>Buy bitcoins by bank transfer (Chile only), or by Western Digital or Moneygram (US, some of Europe, India, others.).</p>
 
 rbitcoin:
-  label: rbitco.in
-  countries: [in us uk ca au]
-  icon: https://rbitcoin/img/rBitCoin.png 
+  label: rBitco.in
+  countries: [in, us, uk, ca, au]
+  location: [in]
+  icon: /favicon.png
   url: https://rbitco.in/
   content:|
     <p>Real Bitcoin India:</p>
@@ -88,6 +95,7 @@ rbitcoin:
 bitcoincomes:
   label: Bitcoin.com.es
   countries: [es]
+  location: [es]
   icon: http://www.bitcoin.com.es/images/favicon.png
   url: http://www.bitcoin.com.es/
   content: |
@@ -96,6 +104,7 @@ bitcoincomes:
 spendbitcoins:
   label: SpendBitcoins.com
   icon: https://www.spendbitcoins.com/media/css/images/favicon.ico
+  location: [au]
   countries: [au]
   url: https://www.spendbitcoins.com/
   content: |
@@ -135,6 +144,7 @@ bitstamp:
 btc-e:
   label: BTC-e.com
   icon: https://btc-e.com/favicon.ico
+  location: [ru]
   countries: [uk, ru]
   url: https://btc-e.com/
   content:|
@@ -142,6 +152,7 @@ btc-e:
 
 bitcoinde:
   label: Bitcoin.de
+  location: [de]
   countries: [be, bg, cz, dk, de, ee, ie, el, es, fr, it, cy, lv, lt, lu, hu, mt, nl, at, pl, pt, ro, si, sk, fi, se, uk]
   icon: https://www.bitcoin.de/favicon.ico
   url: https://www.bitcoin.de/
@@ -155,7 +166,6 @@ bitcoinnordic:
   url: https://www.bitcoinnordic.com/
   content:|
     <p>On Bitcoin Nordic you can purchase bitcoins using international bank transfers from any country and CashU prepaid cards sold in North Africa and the Middle East.<br /><br />In addition, UKash vouchers sold in any country including Central and South America can be exchanged to CashU and then used to purchase bitcoins on Bitcoin Nordic.</p>
-
 
 exante:
   countries: [af, ax, al, dz, as, ad, ao, ai, aq, ag, ar, am, aw, au, at, az, bs, bh, bd, bb, by, be, bz, bj, bm, bt, bo, ba, bw, bv, br, io, bn, bg, bf, bi, kh, cm, ca, cv, ky, cf, td, cl, cn, cx, cc, co, km, cg, cd, ck, cr, ci, hr, cu, cy, cz, dk, dj, dm, do, ec, eg, sv, gq, er, ee, et, fk, fo, fj, fi, fr, gf, pf, tf, ga, gm, ge, de, gh, gi, gr, gl, gd, gp, gu, gt, gg, gn, gw, gy, ht, hm, va, hn, hk, hu, is, in, id, ir, iq, ie, im, il, it, jm, jp, je, jo, kz, ke, ki, kp, kr, kw, kg, la, lv, lb,  ls, lr, ly, li, lt, lu, mo, mk, mg, mw, my, mv, ml, mt, mh, mq, mr, mu, yt, mx, fm, md, mc, mn, me, ms, ma, mz, mm, na, nr, np, nl, an, nc, nz, ni, ne, ng, nu, nf, mp, no, om, pk, pw, ps, pa, pg, py, pe, ph, pn, pl, pt, pr, qa, re, ro, ru, rw, sh, kn, lc, pm, vc, ws, sm, st, sa, sn, rs, sc, sl, sg, sk, si, sb, so, za, gs, es, lk, sd, sr, sj, sz, se, ch, sy, tw, tj, tz, th, tl, tg, tk, to, tt, tn, tr, tm, tc, tv, ug, ua, ae, uk, us, um, uy, uz, vu, ve, vn, vg, vi, wf, eh, ye, zm, zw]
@@ -173,8 +183,9 @@ exante:
     </p>
 
 bitcoil:
-  label: bitcoil.co.il
+  label: Bitcoil.co.il
   countries: [il]
+  location: [il]
   icon: http://bitcoil.co.il/favicon.ico
   url: http://bitcoil.co.il
   content:|
@@ -183,15 +194,17 @@ bitcoil:
 mercadobitcoin:
   label: MercadoBitcoin.com.br
   url: http://www.mercadobitcoin.com.br
+  location: [br]
   countries: [br]
   icon: http://www.mercadobitcoin.com.br/static/ico/favicon.ico
   content:|
       <p>Buy and sell bitcoins in Brazil.</p>
 
 bbbitcoins:
-  label: bbbitcoins.com.br
+  label: BBBitcoins.com.br
   icon: http://bbbitcoins.com.br/imagem/cache/data/icon-20x20.png
   countries: [br]
+  location: [br]
   url: http://bbbitcoins.com.br
   content:|
       <p>Buy and sell bitcoins in Brazil.</p>
@@ -199,26 +212,29 @@ bbbitcoins:
 btradeaustralia:
   label: BTradeAustralia
   countries: [au]
+  location: [au]
   icon: /favicon.png
   url: https://www.btradeaustralia.com/
   content: |
       <p>Australian exchange.</p>
 
 buybitcoinaustralia:
-  label: buybitcoinaustralia.com.au
+  label: BuyBitcoinAustralia
   countries: [au]
+  location: [au]
   icon: /favicon.png
   url: http://buybitcoinaustralia.com.au
   content: |
       <p>Australian exchange.</p>
 
 bitmarket:
-  label: https://bitmarket.co
+  label: BitMarket.co
   countries: [co]
+  location: [co]
   icon: /favicon.png
   url: https://bitmarket.co
   content: |
-      <p></p>
+      <p>Exchange based in Colombia.</p>
 
 btc-dealer:
   label: Btc-dealer
@@ -275,7 +291,7 @@ bitcointalk-otc:
       
 cavirtex:
   countries: [ca]
-  priority: [ca]
+  location: [ca]
   icon: /favicon.png
   label: Canadian Virtual Exchange
   url: https://www.cavirtex.com/
@@ -284,8 +300,9 @@ cavirtex:
 
 kapiton:
   countries: [se]
+  location: [se]
   icon: https://kapiton.se/favicon.ico
-  label: Kapiton
+  label: Kapiton.se
   url: https://kapiton.se/
   content:|
     <p>This exchange is registered, but not regulated by, the financial inspector in Sweden.</p>

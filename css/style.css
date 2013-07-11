@@ -118,19 +118,24 @@ a{
 #headingarea a:hover{
   color: white;
 }
+
+
 .ui-autocomplete{
-  text-align: center;
-  padding: 2px;
+  height: 250px; 
+  overflow-y: scroll; 
+  overflow-x: hidden;
+
+  text-align: left;
+  padding: 2px 10px 2px 10px;
   color: #ccc;
   margin: 3px;
   border-radius:  4px;
   background-color: #000;
   background-color: rgba(0,0,0,0.5);
-  max-height: 240px;
+  max-height: 250px;
   max-width: 408px;
-  overflow: hidden;
-  /*text-transform: uppercase;*/
 }
+
 .ui-autocomplete a{
   color: #ccc;
 }
@@ -149,6 +154,9 @@ a{
 
 .country .ui-autocomplete{
   background-color: rgba(30,35,43,0.9);
+
+  height: 450px; 
+  max-height: 450px;
 }
 
 .ui-autocomplete strong{
@@ -199,6 +207,10 @@ a{
   font-family: 'Ubuntu', Helvetica, Verdana, Arial, sans-serif;
   background-color: white;
 
+}
+
+#searchbox .selected{
+  background-color: #FFFF00
 }
 
 
@@ -302,13 +314,13 @@ a{
 }
 
 .serviceBox .left{
-  width:45%;
+  width:25%;
   float:left;
   text-align: left;
   margin: 4px 1px 4px 22px;
 }
 .serviceBox .right{
-  width:45%;
+  width:65%;
   float:right;
   text-align: right;
   margin: 4px 1px;
