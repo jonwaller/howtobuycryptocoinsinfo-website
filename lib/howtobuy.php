@@ -28,12 +28,15 @@ function get_service_data($filename){
 }
 
 function generate_country_boxes($data, $currentcountry){
-  foreach($data as $service):
-    if(! $service["hidden"] ):
-      if( in_array($currentcountry, $service["countries"]) ):
-        generate_box($service); 
-      endif;
-    endif;
-  endforeach;
+  foreach($data as $service){
+    if(! $service["hidden"] && in_array($currentcountry, $service["countries"]) && isset($service["priority"]) && in_array($currentcountry, $service["priority"]) ){
+      generate_box($service); 
+    }
+  }
+  foreach($data as $service){
+    if(! $service["hidden"] && in_array($currentcountry, $service["countries"]) && (! isset($service["priority"]) || ! in_array($currentcountry, $service["priority"]) ) ){
+      generate_box($service); 
+    }
+  }
 }
 ?>

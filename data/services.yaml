@@ -8,6 +8,7 @@ mtgox:
 
 bitinstant:
   countries: [bs, ky, kz, pr, ru, tc, ua, us, vg, vi]
+  priority: [us]
   icon: /favicon.png
   label: BitInstant.com
   url: https://bitinstant.com/
@@ -50,6 +51,7 @@ bitbargain:
 coinbase:
   label: Coinbase.com
   countries: [us]
+  priority: [us]
   icon: https://coinbase.com/favicon.ico
   url: https://coinbase.com/
   content:|
@@ -273,6 +275,7 @@ bitcointalk-otc:
       
 cavirtex:
   countries: [ca]
+  priority: [ca]
   icon: /favicon.png
   label: Canadian Virtual Exchange
   url: https://www.cavirtex.com/
