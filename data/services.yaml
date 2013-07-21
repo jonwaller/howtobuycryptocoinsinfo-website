@@ -153,7 +153,10 @@ eudemocracia:
   countries: [ar]
   url: http://wiki.eudemocracia.org/en/bitcoin
   content: |
-      <p>Mailing list and Facebook Group.<br /><br />Bitcoin Argentina is a bilingual community provided by Eudemocracia where their members buy and sell bitcoins.<br /><br />Bitcoin Argentina es una comunidad apoyada por Asociación Civil Eudemocracia donde sus miembros pueden realizar ofertas de compra y venta para intercambiar bitcoins entre sí.</p>
+      <p>Bitcoin Argentina es una comunidad apoyada por Asociación Civil Eudemocracia donde sus miembros pueden realizar ofertas de compra y venta para intercambiar bitcoins entre sí.</p>
+      <hr />
+      <p>Mailing list and Facebook Group.</p>
+      <p>Bitcoin Argentina is a bilingual community provided by Eudemocracia where their members buy and sell bitcoins.</p>
 
 coinjarfiller:
   label: CoinJar Filler
@@ -171,7 +174,7 @@ bitxoin:
   countries: [au]
   url: https://www.bitXoin.com
   content: |
-      <p>Using bitXoin makes buying bitcoins using cash as easy as 1 - 2 - 3 Forget long wait-times and non-responsive transacting by using our easy to use broking platform, and making cash deposits over the counter.</p> 
+      <p>Using bitXoin makes buying bitcoins using cash as easy as 1 - 2 - 3. Forget long wait-times and non-responsive transacting by using our easy to use brokerage platform, and making cash deposits over the counter.</p> 
 
 bittylicious:
   label: Bittylicious
@@ -189,7 +192,7 @@ coinmama:
   label: CoinMama
   url: http://www.coinmama.com/
   content:|
-    <p>Fast and easy way to purchase bitcoins with Western Union, Money Gram and credit cards.</p>
+    <p>Fast and easy way to purchase bitcoins with Western Union, MoneyGram and credit cards.</p>
 
 bitinnovate:  
   label: BitInnovate.com
