@@ -381,3 +381,12 @@ kapiton:
   url: https://kapiton.se/
   content:|
     <p>This exchange is registered, but not regulated by, the financial inspector in Sweden.</p>
+    
+quickbt:
+  countries: [ca]
+  location: [ca]
+  icon: https://quickbt.com/favicon.ico
+  label: QuickBT
+  url: https://quickbt.com/
+  content:|
+    <p>Instant Bitcoin purchase/payment using your Interac debit card.</p>
