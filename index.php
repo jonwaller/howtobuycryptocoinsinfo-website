@@ -64,7 +64,7 @@
 
 <div id="header">
 	<div style="float: right">
-		<a href="mailto:info@howtobuybitcoins.info">Corrections / Updates?</a> |
+		<a href="mailto:info@howtobuybitcoins.info?body=For additions, please provide: Site name, url, description, location (e.g UK), and list of supported countries. Multiple languages OK. Thanks.">Corrections / Updates?</a> |
 		<a href="https://github.com/jonwaller/howtobuybitcoinsinfo-website">Contribute on Github</a>
 	</div>  
 

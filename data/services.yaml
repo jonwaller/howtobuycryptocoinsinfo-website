@@ -214,13 +214,14 @@ therocktrading:
   label: TheRockTrading.com
   icon: /favicon.png
   countries: [be, bg, cz, dk, de, ee, ie, el, es, fr, it, cy, lv, lt, lu, hu, mt, nl, at, pl, pt, ro, si, sk, fi, se, uk]
+  url: https://therocktrading.com/
   content: |
       <p>Trade e-currencies (such as Bitcoin and Lindens) from anywhere in Europe. (Supports SEPA bank transfers)</p>
 
 bitstamp:
   label: BitStamp.net
   icon: https://www.bitstamp.net/s/favicon.ico
-  countries: [uk, us, ru, nl, fi, pl, cz, it, si, li]
+  countries: [us, ru, nl, fi, pl, cz, it, si, li, es, be, bg, cz, dk, de, ee, ie, el, es, fr, it, cy, lv, lt, lu, hu, mt, nl, at, pl, pt, ro, si, sk, fi, se, uk]
   url: https://www.bitstamp.net
   content:|
       <p>Buy and sell bitcoins with other users through an online marketplace.</p>
@@ -259,21 +260,12 @@ exante:
   content:|
     <p>1 Fund share = 1 bitcoin
        <ul>
-         <li>Any amount (from 100 000 USD) -- <br />Fund holds 92 000 bitcoins</li>
+         <li>Any amount (from 10,000 Euros) -- <br />Fund holds 92 000 bitcoins</li>
          <li>Fund shares can be on balance sheet</li>
          <li>Faster execution of orders -- Fund has best execution from Mt.Gox and other markets as a major player</li>
          <li>Fund manages wallet security</li>
        </ul>
     </p>
-
-bitcoil:
-  label: Bitcoil.co.il
-  countries: [il]
-  location: [il]
-  icon: http://bitcoil.co.il/favicon.ico
-  url: http://bitcoil.co.il
-  content:|
-      <p>Here you can buy and sell bitcoins for Israeli New Shekels.</p>
 
 mercadobitcoin:
   label: MercadoBitcoin.com.br
@@ -332,6 +324,135 @@ btc-dealer:
       cashU (USD)<br />
       Cash4WM (USD, RUB)<br />
       Przelewy24 (PLN)</p>
+
+24change:
+  label: 24change 
+  countries: [uk,ru]
+  icon: /favicon.png
+  url: https://24change.com/
+  content: An automated buy/sell bitcoin service
+
+quickbitcoin:
+  label: QuickBitcoin 
+  countries: [uk]
+  location: [uk]
+  icon: /favicon.png
+  url: https://quickbitcoin.co.uk/
+  content: At QuickBitcoin.co.uk you can buy Bitcoins for UK bank transfers. Average transaction time is under 10 minutes.
+
+dagensia:
+  label: Dagensia 
+  countries: [uk]
+  location: [cz]
+  icon: /favicon.png
+  url: https://dagensia.eu/
+  content: Dagensia allows you to Buy and Sell Bitcoins and to store Bitcoins securely. You can get your first Bitcoin today with Sofort Uberweisung or Bank wire, or you can start accepting Bitcoins directly into EUR or USD balance and ATM card.
+
+bitcoinsnorge:
+  label: BitcoinsNorge 
+  countries: [no]
+  location: [no]
+  icon: /favicon.png
+  url: http://www.bitcoinsnorge.no/
+  content: Vi selger Bitcoins mot et lite provisjonstillegg.
+
+coinrepublic:
+  label: Coin Republic 
+  countries: [sg]
+  location: [sg]
+  icon: /favicon.png
+  url: http://coinrepublic.com/buy-sell-bitcoins-singapore/
+  content: We decided to start Selling and Buying Bitcoins directly! 
+
+coinrepublic:
+  label: Coin Republic 
+  countries: [sg]
+  location: [sg]
+  icon: /favicon.png
+  url: http://coinrepublic.com/buy-sell-bitcoins-singapore/
+  content: We decided to start Selling and Buying Bitcoins directly! 
+
+asianexgen:
+  label: Asia Nexgen 
+  countries: [cn]
+  location: [cn]
+  icon: /favicon.png
+  url: https://anx.hk/
+  content: ASIA NEXGEN provides an easy, secure, and affordable marketplace for you to buy and sell Bitcoins.
+
+bitcoinbrokers:
+  label: Bitcoin Brokers
+  countries: [us]
+  location: [us]
+  icon: /favicon.png
+  url: http://www.bitcoin-brokers.org/
+  content: Bitcoin-Brokers brings together bitcoin buyers and bitcoin sellers and creates the framework for a safe, easy, and convenient experience for both parties to either buy or sell bitcoin.
+
+buysellbitcoin:
+  label: BuySellBitco.in
+  countries: [in]
+  location: [in]
+  icon: /favicon.png
+  url: https://www.buysellbitco.in/
+  content: BuySellBitco.in India online! NEFT, cheque supported!!!
+
+buysellbitcoin:
+  label: BuySellBitco.in
+  countries: [in]
+  location: [in]
+  icon: /favicon.png
+  url: https://www.buysellbitco.in/
+  content: BuySellBitco.in India online! NEFT, cheque supported!!!
+
+bitcoini:
+  label: Bitcoini
+  countries: [en,bu,ro]
+  location: [bu]
+  icon: /favicon.png
+  url: https://bitcoini.com/en/
+  content: Our primary goal is to make the exchange of bitcoins with Western Union and MoneyGram, fast, cheap and secure.
+
+quickbt:
+  label: QuickBT
+  countries: [ca]
+  location: [ca]
+  icon: /favicon.png
+  url: https://quickbt.com/
+  content: Pay up to 0.3 Bitcoin instantly with your Interac® debit card.
+
+btcturk:
+  label: BTCTurk
+  countries: [tr]
+  location: [tr]
+  icon: /favicon.png
+  url: http://btcturk.com/
+  content: Türk Lirası ile kolayca Bitcoin alıp satabileceğiniz ilk ve tek adres.
+
+bitcoiniacs:
+  label: Bitcoiniacs
+  countries: [ca]
+  location: [ca]
+  icon: /favicon.png
+  url: http://www.bitcoiniacs.com/
+  content: Bitcoiniacs - The Bitcoin Store is Vancouver's first physical bitcoin exchange. Our mission is to make the process of buying and selling bitcoins simple, safe, and secure for everyone.
+
+bitsofgold:
+  label: BitsOfGold
+  countries: [il]
+  location: [il]
+  icon: https://www.bitsofgold.co.il/assets/favicon_32x32-a29b74909e46ce37a5fd304ec027fa10.ico
+  url: https://www.bitsofgold.co.il
+  content:|
+      <p>Buy and Sell bitcoin in Israel, for Israeli Shekel.</p>
+
+bitcoinaustralia:
+  label: Bitcoin Australia
+  countries: [au]
+  location: [au]
+  icon: /favicon.png
+  url: https://www.getbitcoin.com.au/
+  content: Providing an exchange service to convert Australian dollars to bitcoins. Low exchange rates and fair commission.
+
 
 localbitcoins:
   label: LocalBitcoins.com
