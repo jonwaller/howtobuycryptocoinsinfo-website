@@ -5,7 +5,7 @@ mtgox:
   label: Mt. Gox
   url: https://mtgox.com/
   content:|
-    <p>Well known bitcoin exchange. Sign up for an account, verify yourself and you can purchase a large number of bitcoins.</p>
+    <p>Well-known bitcoin exchange. Sign up for an account, verify yourself and you can purchase a large number of bitcoins.</p>
 
 bitinstant:
   countries: [bs, ky, kz, pr, ru, tc, ua, us, vg, vi]
@@ -321,7 +321,7 @@ btc-dealer:
   countries: [uk,ru]
   icon: /favicon.png
   url: https://24change.com/
-  content: An automated buy/sell bitcoin service
+  content: <p>An automated buy/sell bitcoin service</p>
 
 quickbitcoin:
   label: QuickBitcoin 
@@ -329,7 +329,7 @@ quickbitcoin:
   location: [uk]
   icon: /favicon.png
   url: https://quickbitcoin.co.uk/
-  content: At QuickBitcoin.co.uk you can buy Bitcoins for UK bank transfers. Average transaction time is under 10 minutes.
+  content: <p>At QuickBitcoin.co.uk you can buy Bitcoins for UK bank transfers. Average transaction time is under 10 minutes.</p>
 
 dagensia:
   label: Dagensia 
@@ -337,7 +337,7 @@ dagensia:
   location: [cz]
   icon: /favicon.png
   url: https://dagensia.eu/
-  content: Dagensia allows you to Buy and Sell Bitcoins and to store Bitcoins securely. You can get your first Bitcoin today with Sofort Uberweisung or Bank wire, or you can start accepting Bitcoins directly into EUR or USD balance and ATM card.
+  content: <p>Dagensia allows you to Buy and Sell Bitcoins and to store Bitcoins securely. You can get your first Bitcoin today with Sofort Uberweisung or Bank wire, or you can start accepting Bitcoins directly into EUR or USD balance and ATM card.</p>
 
 bitcoinsnorge:
   label: BitcoinsNorge 
@@ -345,7 +345,7 @@ bitcoinsnorge:
   location: [no]
   icon: /favicon.png
   url: http://www.bitcoinsnorge.no/
-  content: Vi selger Bitcoins mot et lite provisjonstillegg.
+  content: <p>Vi selger Bitcoins mot et lite provisjonstillegg.</p>
 
 coinrepublic:
   label: Coin Republic 
@@ -353,15 +353,7 @@ coinrepublic:
   location: [sg]
   icon: /favicon.png
   url: http://coinrepublic.com/buy-sell-bitcoins-singapore/
-  content: We decided to start Selling and Buying Bitcoins directly! 
-
-coinrepublic:
-  label: Coin Republic 
-  countries: [sg]
-  location: [sg]
-  icon: /favicon.png
-  url: http://coinrepublic.com/buy-sell-bitcoins-singapore/
-  content: We decided to start Selling and Buying Bitcoins directly! 
+  content: <p>We decided to start Selling and Buying Bitcoins directly!</p>
 
 asianexgen:
   label: Asia Nexgen 
@@ -369,7 +361,7 @@ asianexgen:
   location: [cn]
   icon: /favicon.png
   url: https://anx.hk/
-  content: ASIA NEXGEN provides an easy, secure, and affordable marketplace for you to buy and sell Bitcoins.
+  content: <p>ASIA NEXGEN provides an easy, secure, and affordable marketplace for you to buy and sell Bitcoins.</p>
 
 bitcoinbrokers:
   label: Bitcoin Brokers
@@ -377,7 +369,7 @@ bitcoinbrokers:
   location: [us]
   icon: /favicon.png
   url: http://www.bitcoin-brokers.org/
-  content: Bitcoin-Brokers brings together bitcoin buyers and bitcoin sellers and creates the framework for a safe, easy, and convenient experience for both parties to either buy or sell bitcoin.
+  content: <p>Bitcoin-Brokers brings together bitcoin buyers and bitcoin sellers and creates the framework for a safe, easy, and convenient experience for both parties to either buy or sell bitcoin.</p>
 
 buysellbitcoin:
   label: BuySellBitco.in
@@ -385,15 +377,7 @@ buysellbitcoin:
   location: [in]
   icon: /favicon.png
   url: https://www.buysellbitco.in/
-  content: BuySellBitco.in India online! NEFT, cheque supported!!!
-
-buysellbitcoin:
-  label: BuySellBitco.in
-  countries: [in]
-  location: [in]
-  icon: /favicon.png
-  url: https://www.buysellbitco.in/
-  content: BuySellBitco.in India online! NEFT, cheque supported!!!
+  content: <p>BuySellBitco.in India online! NEFT, cheque supported!!!</p>
 
 bitcoini:
   label: Bitcoini
@@ -401,7 +385,7 @@ bitcoini:
   location: [bu]
   icon: /favicon.png
   url: https://bitcoini.com/en/
-  content: Our primary goal is to make the exchange of bitcoins with Western Union and MoneyGram, fast, cheap and secure.
+  content: <p>Our primary goal is to make the exchange of bitcoins with Western Union and MoneyGram, fast, cheap and secure.</p>
 
 quickbt:
   label: QuickBT
@@ -409,7 +393,7 @@ quickbt:
   location: [ca]
   icon: /favicon.png
   url: https://quickbt.com/
-  content: Pay up to 0.3 Bitcoin instantly with your Interac® debit card.
+  content: <p>Pay up to 0.3 Bitcoin instantly with your Interac® debit card.</p>
 
 btcturk:
   label: BTCTurk
@@ -417,7 +401,7 @@ btcturk:
   location: [tr]
   icon: /favicon.png
   url: http://btcturk.com/
-  content: Türk Lirası ile kolayca Bitcoin alıp satabileceğiniz ilk ve tek adres.
+  content: <p>Türk Lirası ile kolayca Bitcoin alıp satabileceğiniz ilk ve tek adres.</p>
 
 bitcoiniacs:
   label: Bitcoiniacs
@@ -425,7 +409,7 @@ bitcoiniacs:
   location: [ca]
   icon: /favicon.png
   url: http://www.bitcoiniacs.com/
-  content: Bitcoiniacs - The Bitcoin Store is Vancouver's first physical bitcoin exchange. Our mission is to make the process of buying and selling bitcoins simple, safe, and secure for everyone.
+  content: <p>Bitcoiniacs - The Bitcoin Store is Vancouver's first physical bitcoin exchange. Our mission is to make the process of buying and selling bitcoins simple, safe, and secure for everyone.</p>
 
 bitsofgold:
   label: BitsOfGold
