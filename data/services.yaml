@@ -126,25 +126,16 @@ fyb-se:
   countries: [se]
   url: https://www.fybse.se
   content: |
-      <p>Exchange based in Sweden.</p>
+      <p>Exchange based in Sweden to facilitate buying/selling of Bitcoins with the Swedish Kronor.</p>
 
 fyb-sg:
   label: FYB-SG
   icon: /favicon.png
   location: [sg]
   countries: [sg]
-  url: https://www.fybse.sg
+  url: https://www.fybsg.com
   content: |
       <p>Exchange based in Singapore.</p>
-
-fyb-uk:
-  label: FYB-UK
-  icon: /favicon.png
-  location: [uk]
-  countries: [uk]
-  url: https://www.fybuk.co.uk
-  content: |
-      <p>Exchange based in United Kingdom.</p>
 
 eudemocracia:
   label: Bitcoin Argentina: Bitcoins Exchange
