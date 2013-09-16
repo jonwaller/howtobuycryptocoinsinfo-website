@@ -387,14 +387,6 @@ bitcoini:
   url: https://bitcoini.com/en/
   content: <p>Our primary goal is to make the exchange of bitcoins with Western Union and MoneyGram, fast, cheap and secure.</p>
 
-quickbt:
-  label: QuickBT
-  countries: [ca]
-  location: [ca]
-  icon: /favicon.png
-  url: https://quickbt.com/
-  content: <p>Pay up to 0.3 Bitcoin instantly with your Interac® debit card.</p>
-
 btcturk:
   label: BTCTurk
   countries: [tr]
@@ -495,3 +487,4 @@ quickbt:
   url: https://quickbt.com/
   content:|
     <p>Instant Bitcoin purchase/payment using your Interac debit card.</p>
+
