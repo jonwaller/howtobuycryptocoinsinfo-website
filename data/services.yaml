@@ -275,6 +275,15 @@ buybitcoinaustralia:
   content: |
       <p>Australian exchange.</p>
 
+bitcoin4australia:
+  label: Bitcoin4Australia
+  countries: [au]
+  location: [au]
+  icon: /favicon.png
+  url: http://www.Bitcoin4Australia.com
+  content: |
+      <p>Australian Bitcoin Exchange supplying Bitcoin for cash over the counter deposit at the Major Australian Banks.</p>
+
 bitmarket:
   label: BitMarket.co
   countries: [co]
