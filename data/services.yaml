@@ -259,12 +259,12 @@ bbbitcoins:
       <p>Buy and sell bitcoins in Brazil.</p>
 
 btradeaustralia:
-  label: Bit Trade Australia: Australian Bitcoin Exchange
+  label: Bit Trade Australia
   countries: [au]
   location: [au]
   icon: /favicon.png
   url: https://www.btradeaustralia.com/
-  content: Australian exchange. Telephone: +61 2 9119 2944
+  content: Australian exchange.
 
 buybitcoinaustralia:
   label: BuyBitcoinAustralia
