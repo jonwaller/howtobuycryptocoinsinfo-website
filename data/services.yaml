@@ -44,10 +44,17 @@ bitbargain:
 
 btc38:
   icon: /favicon.png
-  label: BitBargain
+  label: BTC38
   url: http://www.btc38.com/
   content: Chinese cryptocurrency exchange.
   coins: [BTC, LTC, XPM, BEC, XRP, ZCC, MEC, ANC, PPC, SRC, TAG, PTS, TMC]
+
+buymastercoin:
+  icon: /favicon.png
+  label: BuyMastercoin
+  url: http://www.buymastercoin.com/
+  content: Broker for mastercoin sales.
+  coins: [MSC]
 
 
 mtgox:
