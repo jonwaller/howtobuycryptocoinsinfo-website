@@ -57,7 +57,7 @@ buymastercoin:
   icon: /favicon.png
   label: BuyMastercoin
   url: http://www.buymastercoin.com/
-  content: Broker for mastercoin sales.
+  content: Broker for Mastercoin sales.
   coins: [MSC]
 
 
