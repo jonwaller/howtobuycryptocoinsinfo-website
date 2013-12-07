@@ -170,7 +170,7 @@
 					style="border:0;width:16px;height:16px;vertical-align: top;"
 				/>
 			</a>
-			<a href="http://bitcoineast.com">This is a BitcoinEAST project</a>
+			<a href="http://bitcoineast.com">A BitcoinEAST project</a> - <a href="http://coinwik.org/List_of_all_DCs">Coin specs</a> / <!--<a href="http://altcoins.com/scamcoins">scams</a>, and --><a href="http://coinmarketcap.com/"> prices</a> - <a href="http://howtobuybitcoins.info/">How to buy bitcoins</a>
 		</div>
 
 	</div>

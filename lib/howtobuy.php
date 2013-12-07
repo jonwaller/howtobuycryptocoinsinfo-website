@@ -55,7 +55,7 @@ function generate_coin_box($service,$currentCoinCode){
         </h3>
       </a>
     <div class="box-content">
-      <?= $service["content"] ?>
+      <p><?= $service["content"] ?></p>
     </div>
     <div class="left">
       <div class="fb-like" data-href="<?= $service["url"] ?>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
@@ -82,7 +82,11 @@ function generate_country_boxes($data, $currentCountryCode){
 
 function generate_coin_boxes($data, $currentCoinCode){
   foreach($data as $service){
-   if(! $service["hidden"] && $service["coins"] && in_array($currentCoinCode, $service["coins"])){
+   if(
+    ! $service["hidden"] && $service["coins"] && 
+    (in_array(strtoupper($currentCoinCode), $service["coins"]) || 
+    in_array(strtolower($currentCoinCode), $service["coins"]))
+    ){
       generate_coin_box($service,$currentCoinCode); 
     }
   }
