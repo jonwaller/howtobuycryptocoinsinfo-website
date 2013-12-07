@@ -82,6 +82,51 @@ body, html{
 }
 
 
+
+
+
+
+#footer .coinlink{
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  font-size: 9px;
+  overflow: visible;
+  float: left;
+  position: relative;
+  text-transform: uppercase;
+}
+
+#footer .coinlink a{
+  color: #aaa;
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 40px;
+  left: 0px;
+}
+
+#footer .coinlink a .coinname{  display: none; }
+#footer .coinlink a .coincode{  display: inline; }
+#footer .coinlink a:hover .coinname{  display: inline; }
+#footer .coinlink a:hover .coincode{  display: none; }
+
+#footer .coinlink a:hover{
+  font-size: 14px;
+  background: #eee;
+  color: black;
+  border: 2px solid white;
+  border-radius: 4px;
+  position: relative;
+  width: 260px;
+  left: -118px;
+  top: -16px;
+  padding: 5px;
+  -webkit-transition: color 0.5s;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+  z-index: 7;
+}
+
 #headingarea{
   background: #485566 url('/img/world.png') top center repeat-x;
   color: white;
@@ -153,6 +198,13 @@ a{
 }
 
 .country .ui-autocomplete{
+  background-color: rgba(30,35,43,0.9);
+
+  height: 450px; 
+  max-height: 450px;
+}
+
+.coin .ui-autocomplete{
   background-color: rgba(30,35,43,0.9);
 
   height: 450px; 
@@ -374,4 +426,22 @@ a{
   -webkit-trainsition: top 0.5s;
 }
 
+.coin #headingarea{
+  position: relative;
+  top: -100px;
+  -webkit-trainsition: top 0.5s;
+  height: 350px;
+  min-height: 0;
+}
+
+.coin #heading{
+  top:90px;
+}
+
+.coin #infoarea{
+  display: block;
+  position: relative;
+  top: -100px;
+  -webkit-trainsition: top 0.5s;
+}
 

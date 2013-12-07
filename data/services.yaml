@@ -6,6 +6,7 @@ mtgox:
   url: https://mtgox.com/
   content:|
     <p>Well-known bitcoin exchange. Sign up for an account, verify yourself and you can purchase a large number of bitcoins.</p>
+  coins: [btc]
 
 posteb:
   countries: [it]
@@ -207,6 +208,7 @@ btc-e:
   url: https://btc-e.com/
   content:|
       <p>Market for buying and selling bitcoin for the UK and Russia.</p>
+  coins: [btc,ltc]
 
 bitcoinde:
   label: Bitcoin.de

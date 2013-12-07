@@ -2,9 +2,9 @@
 	require_once("lib/spyc.php");
 	require_once("lib/howtobuy.php");
 
-	$currentcountry = $_REQUEST['country'];
+	$currentcoin = $_REQUEST['coin'];
 
-	$countrynames = get_country_data();
+	$coinnames = get_coin_data();
 	$serviceData = get_service_data(); 
 
 ?>
@@ -12,15 +12,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>How to Buy Cryptocoins</title>
+	<title>How to Buy <? if ($currentcoin){ echo $coinnames[$currentcoin]; }else{ echo "Cryptocoins";} ?></title>
 	<meta name="description" content="List of places to buy cryptocoins. Pay with bitcoin or other currencies.">
 	<meta name="robots" content="index, follow" />
 	<link rel="shortcut icon" href="/favicon.png" />
 	<link rel="apple-touch-icon" href="/touchicon.png"/>
 	<link rel="stylesheet" href="/css/style.css"/>
 	
-	<meta property="og:title" content="How to Buy Cryptocoins" />
-	<meta property="og:description" content="List of places to buy cryptocoins. Pay with bitcoin or other currencies." />
+	<meta property="og:title" content="How to Buy <? if ($currentcoin){ echo $coinnames[$currentcoin]; }else{ echo "Cryptocoins";} ?>" />
+	<meta property="og:description" content="List of places to buy <? if ($currentcoin){ echo $coinnames[$currentcoin]; }else{ echo "cryptocoins";} ?>. Pay with bitcoin or other currencies." />
 	<meta property="og:image" content="http://<?=$_SERVER["SERVER_NAME"]?>/logo256.png" />
 	<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>
@@ -31,20 +31,21 @@
 	<script src="/js/jquery.placeholder.js"></script>
 	<script src="/js/jquery.masonry.js"></script>
 	<script src="/js/wherebuybitcoins.js"></script>
+	<script src="/js/cryptocoins.js"></script>
 
 </head>
 <body <?
-	if($currentcountry){
-		echo "class='country'";
+	if($currentcoin){
+		echo "class='coin'";
 	}
 ?>>
 <style>
 	#searchbox{
 		background-image: url(#);
-		<? if($currentcountry): ?>
-			background-image: url(/img/miniflags/<?= $currentcountry ?>.png);
+		<? if($currentcoin): ?>
+			background-image: url(/img/coins/<?= $currentcoin ?>.png);
 		<? endif; ?>
-		background-position: 5px 8px;
+		background-position: 5px 6px;
 		background-repeat: no-repeat;
 	}
 </style>
@@ -74,13 +75,7 @@
 	</div>
 </div>
 
-<div id="headingarea">
-	<div id="maparea">
-		<a href="/jp.html" rel="jp" class="ajaxlink flagicon" id="flag_jp"><img src="img/flags/jp.png" width="48" height="48"><br>Japan</a>
-		<a href="/us.html" rel="us" class="ajaxlink flagicon" id="flag_us"><img src="img/flags/us.png" width="48" height="48"><br>USA</a>
-		<a href="/uk.html" rel="uk" class="ajaxlink flagicon" id="flag_uk"><img src="img/flags/uk.png" width="48" height="48"><br>UK</a>
-	</div>
-</div>
+<div id="headingarea"></div>
 
 <div id="infoarea">
 
@@ -141,23 +136,25 @@
 
 	<div id="results">
 		<?
-			if($currentcountry){
-				generate_country_boxes($serviceData, $currentcountry);
+			if($currentcoin){
+				generate_coin_boxes($serviceData, $currentcoin);
 			}
 		?>
+
+		<center>Something missing? Send an <a href="mailto:info@howtobuycryptocoins.info?body=Please provide: Site name, URL, description, and list of supported cryptocoins (use their codes, like LTC or FTC). Thanks.">update</a> or <a href="https://github.com/jonwaller/howtobuycryptocoinsinfo-website">contribute on Github</a>.
 	</div>
 
 </div>
 
 <div id="footer">
 	<div id="footercontent">
-		<h3>You can buy cryptocoins in these countries:</h3>
+		<h3>You can buy these cryptocoins:</h3>
 		
-		<? foreach($countrynames as $code=>$name):?>
-			<div class="countrylink">
+		<? foreach($coinnames as $code=>$name):?>
+			<div class="coinlink">
 				<a  rel="<?= $code ?>" title="<?= $name ?>" href="/<?= $code ?>.html">
-					<span class="countrycode"><?= $code ?></span> 
-					<span class="countryname"><?= $name ?></span>
+					<span class="coincode"><?= $code ?></span> 
+					<span class="coinname"><?= $name ?></span>
 				</a>
 			</div>
 		<? endforeach; ?>
@@ -180,8 +177,8 @@
 </div>
 
 <div id="heading">
-	<h1><a href="/">How to buy<br>cryptocoins in</a></h1>
-	<input type="text" id="searchbox" onClick="this.select();" name="country" value="<? if($currentcountry){ echo $countrynames[$currentcountry]; }?>" placeholder="Enter country name" />
+	<h1><a href="/">How to buy<br>cryptocoins</a></h1>
+	<input type="text" id="searchbox" onClick="this.select();" name="coin" value="<? if($currentcoin){ echo $coinnames[$currentcoin]; }?>" placeholder="Enter cryptocoin name or code" />
 </div>
 
 <script type="text/javascript">
@@ -210,36 +207,29 @@
 	$(document).ready(function(){
 
 		var currentCountryCode="<?=$currentcountry?>";
+		var currentCoinCode="<?=$currentcoin?>";
 
 		$(".langBox").hide();
-		
-		if (currentCountryCode=="jp") {
-			$(".langBox.jp").show();
-		}else if (currentCountryCode=="cn") {
-			$(".langBox.cn").show();
-		}else if (currentCountryCode=="es") {
-			$(".langBox.es").show();
-		}else if (currentCountryCode=="fr") {
-			$(".langBox.fr").show();
-		}else{      
-			$(".langBox.en").show();
-		}
+		$(".langBox.en").show();
 
-		var countries = [];
+
+		var coins = [];
 		$("#warningarea").masonry({itemSelector:".warningBox"});
 		$("#results").masonry({itemSelector:".serviceBox"});
 
-		for(var countryIndex in countryNamesArr){
-			var countryCode = countryNamesArr[countryIndex][0];
-			var countryName = countryNamesArr[countryIndex][1];
+		for(var coinIndex in coinNamesArr){
+			var coinCode = coinNamesArr[coinIndex][0];
+			var coinName = coinNamesArr[coinIndex][1];
 
-			countries.push({value:countryName, data:countryCode});
+			coinName=coinCode.toUpperCase()+" - "+coinName;
+
+			coins.push({value:coinName, data:coinCode});
 		}
 
 		var searchbox=$('#searchbox');
 
 		searchbox.autocomplete({
-			source: countries,
+			source: coins,
 			autoFocus: true,
 			delay: 100,
 			minLength: 0,
@@ -253,7 +243,7 @@
 		});
 
 		searchbox.blur(function(event) {
-			if ($(this).val() == '') $(this).val('<? if($currentcountry){ echo $countrynames[$currentcountry]; }?>');
+			if ($(this).val() == '') $(this).val('<? if($currentcoin){ echo $coinnames[$currentcoin]; }?>');
 		});
 
 	});
@@ -262,17 +252,14 @@
 
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
 		
-<script type="text/javascript">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-4294505-15']);
-	_gaq.push(['_trackPageview']);
-
-	(function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	})();
+  ga('create', 'UA-4294505-16', 'howtobuycryptocoins.info');
+  ga('send', 'pageview');
 
 </script>
 

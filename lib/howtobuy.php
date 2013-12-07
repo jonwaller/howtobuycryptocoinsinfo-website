@@ -7,7 +7,11 @@ function get_country_data(){
   return Spyc::YAMLLoad("data/countries-codesorted.yaml");
 }
 
-function generate_box($service,$currentCountryCode){
+function get_coin_data(){
+  return Spyc::YAMLLoad("data/coins-codesorted.yaml");
+}
+
+function generate_country_box($service,$currentCountryCode){
 
   $locationHtml="";
   if (isset($service["location"])){
@@ -42,16 +46,46 @@ function generate_box($service,$currentCountryCode){
   <?
 }
 
+function generate_coin_box($service,$currentCoinCode){
+  ?>
+  <div class="serviceBox">
+      <a href="<?= $service["url"] ?>" target="_blank">
+        <h3 class="box-title">
+            <img width="16" height="16" src="<?= $service["icon"] ?>"> <?= $service["label"] ?> 
+        </h3>
+      </a>
+    <div class="box-content">
+      <?= $service["content"] ?>
+    </div>
+    <div class="left">
+      <div class="fb-like" data-href="<?= $service["url"] ?>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
+    </div>
+    <div class="right">
+      <a class="button" href="<?= $service["url"] ?>" target="_blank">Buy <?=strtoupper($currentCoinCode)?></a>
+    </div>
+  </div>
+  <?
+}
+
 function generate_country_boxes($data, $currentCountryCode){
   foreach($data as $service){
     if(! $service["hidden"] && in_array($currentCountryCode, $service["countries"]) && isset($service["location"]) && in_array($currentCountryCode, $service["location"]) ){
-      generate_box($service,$currentCountryCode); 
+      generate_country_box($service,$currentCountryCode); 
     }
   }
   foreach($data as $service){
     if(! $service["hidden"] && in_array($currentCountryCode, $service["countries"]) && (! isset($service["location"]) || ! in_array($currentCountryCode, $service["location"]) ) ){
-      generate_box($service,$currentCountryCode); 
+      generate_country_box($service,$currentCountryCode); 
+    }
+  }
+}
+
+function generate_coin_boxes($data, $currentCoinCode){
+  foreach($data as $service){
+   if(! $service["hidden"] && $service["coins"] && in_array($currentCoinCode, $service["coins"])){
+      generate_coin_box($service,$currentCoinCode); 
     }
   }
 }
 ?>
+
