@@ -15,7 +15,7 @@
 	<title>How to Buy <? if ($currentcoin){ echo $coinnames[$currentcoin]; }else{ echo "Cryptocoins";} ?></title>
 	<meta name="description" content="List of places to buy cryptocoins. Pay with bitcoin or other currencies.">
 	<meta name="robots" content="index, follow" />
-	<link rel="shortcut icon" href="/favicon.png" />
+	<link rel="shortcut icon" href="<?=($currentcoin)?"/img/coins/".$currentcoin.".png":"/favicon.png"?>" />
 	<link rel="apple-touch-icon" href="/touchicon.png"/>
 	<link rel="stylesheet" href="/css/style.css"/>
 	
