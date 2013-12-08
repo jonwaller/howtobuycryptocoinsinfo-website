@@ -52,15 +52,13 @@
 
 <!--Script for non-addthis like buttons-->
 <div id="fb-root"></div>
-<script>
-	(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=268112269983311";
-		fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));
-</script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=168262763382794";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <div id="header">
 	<div style="float: right">
@@ -140,9 +138,17 @@
 				generate_coin_boxes($serviceData, $currentcoin);
 			}
 		?>
-
-		<center>Something missing? Send an <a href="mailto:info@howtobuycryptocoins.info?body=Please provide: Site name, URL, description, and list of supported cryptocoins (use their codes, like LTC or FTC). Thanks.">update</a> or <a href="https://github.com/jonwaller/howtobuycryptocoinsinfo-website">contribute on Github</a>.
 	</div>
+
+	<?if($currentcoin){?>
+	<div>
+		<br />
+		<center>Something missing? Send an <a href="mailto:info@howtobuycryptocoins.info?body=Please provide: Site name, URL, description, and list of supported cryptocoins (use their codes, like LTC or FTC). Thanks.">update</a> or <a href="https://github.com/jonwaller/howtobuycryptocoinsinfo-website">contribute on Github</a>.
+		<br /><br />
+		<div class="fb-comments" data-href="http://howtobuycryptocoins.info/<?=$currentcoin?>.html" data-width="963" data-numposts="10" data-colorscheme="light"></div>
+		<br />	
+	</div>
+	<?}?>
 
 </div>
 
@@ -161,19 +167,21 @@
 
 		<br style="clear: both" />
 		<br />
-
-		<div style="text-align: center">
-			<a href="https://plus.google.com/112885603889814071692/" rel="author" style="text-decoration:none;">
-				<img 
-					src="//ssl.gstatic.com/images/icons/gplus-16.png"
-					alt="Google+"
-					style="border:0;width:16px;height:16px;vertical-align: top;"
-				/>
-			</a>
-			<a href="http://bitcoineast.com">A BitcoinEAST project</a> - <a href="http://coinwik.org/List_of_all_DCs">Coin specs</a> / <!--<a href="http://altcoins.com/scamcoins">scams</a>, and --><a href="http://coinmarketcap.com/"> prices</a> - <a href="http://howtobuybitcoins.info/">How to buy bitcoins</a>
-		</div>
-
 	</div>
+
+</div>
+
+<br />
+<div style="text-align: center">
+	<a href="https://plus.google.com/112885603889814071692/" rel="author" style="text-decoration:none;">
+		<img 
+			src="//ssl.gstatic.com/images/icons/gplus-16.png"
+			alt="Google+"
+			style="border:0;width:16px;height:16px;vertical-align: top;"
+		/>
+	</a>
+	<a href="http://bitcoineast.com">A BitcoinEAST project</a> - <a href="http://coinwik.org/List_of_all_DCs">Coin specs</a> / <!--<a href="http://altcoins.com/scamcoins">scams</a>, and --><a href="http://coinmarketcap.com/"> prices</a> - <a href="http://howtobuybitcoins.info/">How to buy bitcoins</a>
+	<br /><br />
 </div>
 
 <div id="heading">

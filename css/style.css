@@ -32,6 +32,11 @@ body, html{
   background-color: white;
   border-top: 2px solid #eee;
   padding: 10px;
+  position:relative;
+}
+
+.coin #footer{
+    top:-25px;
 }
 
 #footercontent{
@@ -442,6 +447,6 @@ a{
   display: block;
   position: relative;
   top: -100px;
-  -webkit-trainsition: top 0.5s;
+   -webkit-trainsition: top 0.5s;
 }
 
