@@ -132,6 +132,16 @@
 		</div>
 	</div>
 
+	<?if($currentcoin && $currentcoin=="btc"){?>
+	<div id="btcRedirectArea">
+		<div class="btcRedirectBox">
+			<br />
+			<center>To search Bitcoin exchanges by country, try <a href="http://howtobuybitcoins.info/">howtobuybitcoins.info</a>.</center>
+			<br />
+		</div>
+	</div>
+	<?}?>
+
 	<div id="results">
 		<?
 			if($currentcoin){
@@ -159,6 +169,7 @@
 		<? foreach($coinnames as $code=>$name):?>
 			<div class="coinlink">
 				<a  rel="<?= $code ?>" title="<?= $name ?>" href="/<?= $code ?>.html">
+					<span class="coinimg"><img src="/img/coins/<?= $code ?>.png"/></span> 
 					<span class="coincode"><?= $code ?></span> 
 					<span class="coinname"><?= $name ?></span>
 				</a>
@@ -223,6 +234,7 @@
 
 		var coins = [];
 		$("#warningarea").masonry({itemSelector:".warningBox"});
+		$("#btcRedirectArea").masonry({itemSelector:".btcRedirectBox"});
 		$("#results").masonry({itemSelector:".serviceBox"});
 
 		for(var coinIndex in coinNamesArr){

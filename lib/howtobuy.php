@@ -47,11 +47,23 @@ function generate_country_box($service,$currentCountryCode){
 }
 
 function generate_coin_box($service,$currentCoinCode){
+  
+  $locationHtml="";
+  if ($service["location"] && $currentCoinCode=="btc"){
+    foreach($service["location"] as $locationCountryCode){
+        
+        //Something strange happening with Norway (no). Avoiding for now.
+        if ($locationCountryCode){
+          $locationHtml.='<img src="/img/miniflags/'.$locationCountryCode.'.png" onclick="return false;" title="Based in this country." style="float:right;padding:2px;margin-right:0px" />';
+        }
+    }
+  }
+
   ?>
   <div class="serviceBox">
       <a href="<?= $service["url"] ?>" target="_blank">
         <h3 class="box-title">
-            <img width="16" height="16" src="<?= $service["icon"] ?>"> <?= $service["label"] ?> 
+            <img width="16" height="16" src="<?= $service["icon"] ?>"> <?= $service["label"] ?> <?=$locationHtml?>
         </h3>
       </a>
     <div class="box-content">
@@ -61,7 +73,7 @@ function generate_coin_box($service,$currentCoinCode){
       <div class="fb-like" data-href="<?= $service["url"] ?>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
     </div>
     <div class="right">
-      <a class="button" href="<?= $service["url"] ?>" target="_blank">Buy <?=strtoupper($currentCoinCode)?></a>
+      <a class="button" href="<?= $service["url"] ?>" target="_blank">Buy <?=strtoupper($currentCoinCode)?></a><br />
     </div>
   </div>
   <?

@@ -466,7 +466,7 @@ buysellbitcoin:
 bitcoini:
   label: Bitcoini
   countries: [en,bu,ro]
-  location: [bu]
+  location: [ro]
   icon: /favicon.png
   url: https://bitcoini.com/en/
   content: <p>Our primary goal is to make the exchange of bitcoins with Western Union and MoneyGram, fast, cheap and secure.</p>
