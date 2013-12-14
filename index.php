@@ -151,13 +151,20 @@
 	</div>
 
 	<?if($currentcoin){?>
-	<div>
-		<br />
-		<center>Something missing? Send an <a href="mailto:info@howtobuycryptocoins.info?body=Please provide: Site name, URL, description, and list of supported cryptocoins (use their codes, like LTC or FTC). Thanks.">update</a> or <a href="https://github.com/jonwaller/howtobuycryptocoinsinfo-website">contribute on Github</a>.
-		<br /><br />
-		<div class="fb-comments" data-href="http://howtobuycryptocoins.info/<?=$currentcoin?>.html" data-width="963" data-numposts="10" data-colorscheme="light"></div>
-		<br />	
-	</div>
+		<div>
+			<br />
+			<center>
+				Something missing? Send an <a href="mailto:info@howtobuycryptocoins.info?body=Please provide: Site name, URL, description, and list of supported cryptocoins (use their codes, like LTC or FTC). Thanks.">update</a> or <a href="https://github.com/jonwaller/howtobuycryptocoinsinfo-website">contribute on Github</a>.
+			</center>
+			<br />
+		</div>
+		
+		<div>
+			<center>
+				<div class="fb-comments" data-href="http://howtobuycryptocoins.info/<?=$currentcoin?>.html" data-width="963" data-numposts="10" data-colorscheme="light"></div>
+			</center>
+			<br />	
+		</div>
 	<?}?>
 
 </div>

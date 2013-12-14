@@ -67,6 +67,12 @@ DGEX:
   content: BTC / NXT Cryptocoin exchange.
   coins: [NXT]
 
+coinedup:
+  icon: /favicon.png
+  label: CoinedUp
+  url: https://coinedup.com/
+  content: Cryptocoin exchange.
+  coins: [LTC,NMC,NYM,OSC,PPC,TAG,XPM,DOGE]
 
 
 mtgox:
@@ -88,28 +94,6 @@ posteb:
   content:|
     <p>Acquista Bitcoin con Postepay! Il sistema più veloce, economico, sicuro e anonimo per acquistare Bitcoin con Euro in Italia. Tutto automatico.</p>
   coins: [btc]
-
-blockchain-uk:
-  countries: [uk]
-  location: [uk]
-  icon: https://blockchain.info/favicon.ico
-  url: https://blockchain.info/wallet/deposit-bank-transfer
-  label: Bank transfer (Blockchain.info)
-  content:|
-      <p>Pay from any major UK bank account. Transfers bitcoin to your <a href="https://blockchain.info/">Blockchain.info</a> wallet in under 2 hours.</p>
-  coins: [btc]
-
-blockchain:
-  countries: [ar, au, at, be, ba, bg, ca, cl, hr, cz, dk, ee, fi, fr, de, gr, hk, id, ie, il, it, lv, lt, lu, mx, nl, nz, no, pl, pt, ro, ru, sk, za, es, se, ch, tw, tr, ua, uk, us]
-  location: [uk]
-  icon: https://blockchain.info/favicon.ico
-  label: SMS Phone Deposits (Blockchain.info)
-  url: https://blockchain.info/wallet/sms-phone-deposits
-  content:|
-      <p>Works with every mobile phone or landline. No registration required. No credit card required. Can only be used three times a month, but has no maximum purchase limit.</p>
-  coins: [btc]
-
-
 
 coinbase:
   label: Coinbase.com
@@ -466,7 +450,7 @@ buysellbitcoin:
 bitcoini:
   label: Bitcoini
   countries: [en,bu,ro]
-  location: [ro]
+  location: [bu]
   icon: /favicon.png
   url: https://bitcoini.com/en/
   content: <p>Our primary goal is to make the exchange of bitcoins with Western Union and MoneyGram, fast, cheap and secure.</p>
