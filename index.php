@@ -62,7 +62,8 @@
 
 <div id="header">
 	<div style="float: right">
-		<a href="mailto:info@howtobuycryptocoins.info?body=For additions, please provide: Site name, url, description, and list of supported cryptocoins (pleae use their code, like LTC or FTC). Multiple languages OK. Thanks.">Corrections / Updates?</a> |
+		<a href="http://howtobuybitcoins.info/">Buy Bitcoins</a> | 
+		<a href="mailto:info@howtobuycryptocoins.info?body=If possible, please send a pull request. If you're not sure how to do that, feel free to add your update below:%0D%0D- Site name: %0D- URL: %0D- Info (English): %0D- Info (Local language): %0D- Location (2-letter code): %0D- Supported countries (2-letter codes): %0D- Cryptocoins supported (3-letter codes, e.g. BTC, LTC): %0D%0DThanks. If something isn't working, please let me know.">Corrections / Updates?</a> | 
 		<a href="https://github.com/jonwaller/howtobuycryptocoinsinfo-website">Contribute on Github</a>
 	</div>  
 
