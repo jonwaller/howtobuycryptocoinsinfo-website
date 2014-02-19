@@ -1,3 +1,10 @@
+Asia Nexgen:
+  icon: /favicon.png
+  label: Asia Nexgen
+  url: https://www.anxpro.com
+  content: ASIA NEXGEN provides an easy, secure, and affordable marketplace for you to buy and sell cryptocurrencies.
+  coins: [BTC, LTC, PPC, NMC. DOGE]
+
 cryptsy:
   icon: https://www.cryptsy.com/favicon.ico
   label: Cryptsy
