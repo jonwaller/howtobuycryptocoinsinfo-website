@@ -58,6 +58,7 @@ trc:"TerraCoin",
 wdc:"WorldCoin",
 xjo:"JouleCoin",
 xpm:"Primecoin",
+xgc:"GreenCoin"
 xrp:"Ripple",
 zet:"Zetacoin"
 }
