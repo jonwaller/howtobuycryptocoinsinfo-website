@@ -1327,3 +1327,12 @@ BTCTalk:
         <li>Exchange between BTC and IRR easily</li>
       </ul>
   coins: [btc, ltc]
+  
+coinnext:
+  label: Coinnext
+  icon: https://coinnext.com/favicon.ico
+  countries: [us, ru, nl, fi, pl, cz, it, si, li, es, be, bg, cz, dk, de, ee, ie, el, es, fr, it, cy, lv, lt, lu, hu, mt, nl, at, pl, pt, ro, si, sk, fi, se, uk]
+  url: https://coinnext.com
+  content:|
+      <p>Easy and secure cryptocurrency exchange to buy and sell bitcoins and alternative cryptocurrencies.</p>
+  coins: [btc, ltc, doge, ppc, nmc]
