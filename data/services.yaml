@@ -1566,3 +1566,12 @@ kitiwa:
       <p>Buy bitcoins in Ghana and Nigeria with Mobile Money or Bank Transfers. This is the easiest and fastest way to buy Bitcoins in Ghana and Nigeria.</p>
   coins: [btc]
 
+Harborly:
+  label: Harborly
+  countries: [ca]
+  location: [ca]
+  icon: https://s3.amazonaws.com/harborly/favicon/favicon-main.png
+  url: https://harbor.ly
+  content: |
+    <p>Buy & Sell Bitcoin and Litecoin in Canada.</p>
+  coins: [btc, ltc]
