@@ -1566,3 +1566,9 @@ kitiwa:
       <p>Buy bitcoins in Ghana and Nigeria with Mobile Money or Bank Transfers. This is the easiest and fastest way to buy Bitcoins in Ghana and Nigeria.</p>
   coins: [btc]
 
+nlexch:
+  icon: https://www.nlexch.com/favicon-16x16.png
+  label: NLexch
+  url: https://www.nlexch.com/
+  content: Trade over 75 different types of cryptocurrencies.
+  coins: [ADA, ARC, ARG, BXT, BCH, DASH, BSTY, BTC, CAT, CND, CSC, DGB, DGC, DOGE, FRK, FST, FTC, GAME, I0C, INFX, LEAF, LTC, EMC, MUE, XMY, NLG, NMC, NOTE, PTC, QRK, SXC, SMC, SRC, SYS, TRC, UIS, UNO, VCN, XVP, VTC, WDC, XLM, XJO, ZET, ETH, XRP, TIPS]
