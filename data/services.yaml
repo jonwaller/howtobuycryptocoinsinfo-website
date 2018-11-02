@@ -1083,7 +1083,7 @@ ice3x:
   label: ICE3X
   countries: [za]
   location: [za]
-  icon: https://ice3x.com/favicon.ico
+  icon: https://ice3x.com/img/favicon.ico
   url: https://ice3x.com/
   content:  |
     <p>South Africa’s Bitcoin and Litecoin Exchange. Offering trading in South African Rand.</p>
