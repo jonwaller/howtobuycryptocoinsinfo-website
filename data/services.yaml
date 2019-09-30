@@ -1242,9 +1242,10 @@ HardBlock:
   label: HardBlock
   countries: [au]
   location: [au]
-  icon: https://www.hardblock.net/public/images/favIcon.png
-  url: https://www.hardblock.net
-  content:  The Safe, Fast and Cheap way to buy and sell Bitcoin in Australia. Buy over the counter with cash deposit.
+  icon: https://www.hardblock.com.au/public/images/favIcon.png
+  url: https://www.hardblock.com.au
+  content:  Buy Bitcoin, Sell Bitcoin. Instant deposits using POLI, also accepts BPAY and PAYID. 
+  No trade, deposit or withdrawal fees. Exchange only makes money through spread.
   coins: [btc]
 
 bitgo:
